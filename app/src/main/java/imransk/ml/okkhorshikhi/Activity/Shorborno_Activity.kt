@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_shorborno.*
 class Shorborno_Activity : AppCompatActivity() {
 
     var shorbborno_okkhor = ArrayList<String>()
+
      var mPlayer2:MediaPlayer = MediaPlayer()
 
 
