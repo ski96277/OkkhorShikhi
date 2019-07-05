@@ -21,7 +21,6 @@ class Shorborno_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shorborno)
 
-
         shorbborno_okkhor.add("অ")
         shorbborno_okkhor.add("আ")
         shorbborno_okkhor.add("ই")
