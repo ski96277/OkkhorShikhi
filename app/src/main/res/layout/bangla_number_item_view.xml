@@ -14,23 +14,28 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
-    android:orientation="vertical"
-    android:id="@+id/linearLayout_Bangla_number_Item">
+
+            android:background="@drawable/bg_image"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout_Bangla_number_Item">
 
         <TextView
-                android:text="100000"
+                android:text="১০০"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="30sp"
-                android:textColor="#000"
+                android:textSize="90sp"
+                android:fontFamily="@font/nikosh"
+
+                android:textColor="#F5D80719"
                 android:id="@+id/textView_ID_Bangla_number"/>
         <TextView
-                android:text="100000"
+                android:text="১০০০০"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="25sp"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed-light"
                 android:textColor="#000"
                 android:id="@+id/textView_ID_Bangla_number_kothay"/>
     </LinearLayout>

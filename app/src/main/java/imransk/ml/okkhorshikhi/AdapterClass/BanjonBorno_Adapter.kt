@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import imransk.ml.okkhorshikhi.R
 import kotlinx.android.synthetic.main.banjon_borno_item_view.view.*
 
-class BanjonBorno_Adapter(var banjon_borno_List: ArrayList<Int>) :
+class BanjonBorno_Adapter(var banjon_borno_List: ArrayList<String>) :
     RecyclerView.Adapter<BanjonBorno_Adapter.SetValue>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SetValue {
 
@@ -28,8 +28,11 @@ class BanjonBorno_Adapter(var banjon_borno_List: ArrayList<Int>) :
     //the custom class is hodling the list view
     class SetValue(view: View) : RecyclerView.ViewHolder(view) {
 
-        fun getValue(images:Int){
-            itemView.item_image_banjon_borno.setImageResource(images)
+        fun getValue(banjonborno:String){
+
+//            itemView.item_image_banjon_borno.setImageResource(images)
+            itemView.item_text_banjon_borno.text=banjonborno
+
         }
     }
 }

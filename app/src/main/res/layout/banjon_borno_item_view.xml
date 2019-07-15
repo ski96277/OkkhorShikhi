@@ -4,16 +4,22 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content">
 
-    <ImageView
+    <TextView
             android:layout_width="150dp"
-            android:id="@+id/item_image_banjon_borno"
+            android:id="@+id/item_text_banjon_borno"
             android:scaleType="fitXY"
             android:layout_height="150dp"
-            android:src="@drawable/banjon_borno_1"
+            android:text="ক"
+android:fontFamily="@font/nikosh"
+            android:textSize="120dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:background="@drawable/bg_image"
     />
     <LinearLayout android:layout_width="2dp"
-                  android:layout_height="match_parent"
+                  android:layout_height="100dp"
                   android:background="#000"
+                  android:layout_gravity="center"
                   android:layout_marginLeft="5dp"
                   android:layout_marginRight="5dp"/>
 

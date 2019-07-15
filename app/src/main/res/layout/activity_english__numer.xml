@@ -6,15 +6,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Activity.English_Numer_Activity"
-        android:background="@color/bg_color">
+        android:background="#CDDC39">
 
 
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/english_number_recyclerView_ID"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"

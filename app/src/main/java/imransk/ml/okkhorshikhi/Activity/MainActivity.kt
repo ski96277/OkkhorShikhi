@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import imransk.ml.okkhorshikhi.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,6 +15,39 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+//animation for item
+        YoYo.with(Techniques.SlideInRight)
+            .duration(1000)
+            .repeat(0)
+            .playOn(shorborno_btn_ID)
+//animation for item
+        YoYo.with(Techniques.SlideInRight)
+            .duration(1000)
+            .repeat(0)
+            .playOn(capital_letters_btn_ID)
+//animation for item
+        YoYo.with(Techniques.SlideInRight)
+            .duration(1000)
+            .repeat(0)
+            .playOn(number_bangla_btn_ID)
+//animation for item
+        YoYo.with(Techniques.SlideInLeft)
+            .duration(1000)
+            .repeat(0)
+            .playOn(banjon_borno_btn_ID)
+//animation for item
+        YoYo.with(Techniques.SlideInLeft)
+            .duration(1000)
+            .repeat(0)
+            .playOn(small_letters_btn_ID)
+//animation for item
+        YoYo.with(Techniques.SlideInLeft)
+            .duration(1000)
+            .repeat(0)
+            .playOn(number_english_btn_ID)
+
 
         shorborno_btn_ID.setOnClickListener(this)
         banjon_borno_btn_ID.setOnClickListener(this)

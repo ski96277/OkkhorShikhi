@@ -5,12 +5,18 @@
               android:layout_height="wrap_content">
 
 
-    <ImageView
+    <TextView
             android:layout_width="150dp"
-            android:id="@+id/item_image_arbi_letter"
+            android:id="@+id/item_text_arbi_letter"
             android:scaleType="fitXY"
             android:layout_height="150dp"
-            android:src="@drawable/banjon_borno_1"
+            android:text="ظ"
+            android:textColor="#000"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="90sp"
+            android:fontFamily="@font/nikosh"
+            android:background="@drawable/bg_image"
     />
     <LinearLayout android:layout_width="2dp"
                   android:layout_height="match_parent"

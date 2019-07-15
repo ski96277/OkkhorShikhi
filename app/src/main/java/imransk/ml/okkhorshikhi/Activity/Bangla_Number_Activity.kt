@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import imransk.ml.okkhorshikhi.AdapterClass.Bangla_Number_Adapter
 import imransk.ml.okkhorshikhi.R
 import imransk.ml.okkhorshikhi.RecyclerView_click.RecyclerItemClickListenr
@@ -250,10 +252,21 @@ class Bangla_Number_Activity : AppCompatActivity() {
             override fun onItemClick(view: View, position: Int) {
 
 
+
+                YoYo.with(Techniques.BounceInLeft)
+                    .duration(500)
+                    .repeat(0)
+                    .playOn(view.findViewById(R.id.linearLayout_Bangla_number_Item))
+
             }
 
             override fun onItemLongClick(view: View?, position: Int) {
 
+
+                YoYo.with(Techniques.BounceInLeft)
+                    .duration(500)
+                    .repeat(0)
+                    .playOn(view!!.findViewById(R.id.linearLayout_Bangla_number_Item))
             }
 
         }))

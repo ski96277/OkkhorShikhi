@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import imransk.ml.okkhorshikhi.R
 import kotlinx.android.synthetic.main.capital_letter_item_view.view.*
 
-class CapitalLetters_Adapter(var capitalLetters_list: ArrayList<Int>) : RecyclerView.Adapter<CapitalLetters_Adapter.ViewHolder_Class>() {
+class CapitalLetters_Adapter(var capitalLetters_list: ArrayList<String>) : RecyclerView.Adapter<CapitalLetters_Adapter.ViewHolder_Class>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder_Class {
 
         var view = LayoutInflater.from(parent.context).inflate(R.layout.capital_letter_item_view, parent, false)
@@ -27,8 +27,8 @@ class CapitalLetters_Adapter(var capitalLetters_list: ArrayList<Int>) : Recycler
 
     class ViewHolder_Class(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun setvalue(capitalLetters_list: Int){
-            itemView.item_image_capital_letter.setImageResource(capitalLetters_list)
+        fun setvalue(capitalLetters_list: String){
+            itemView.item_Text_capital_letter.text=capitalLetters_list
         }
 
     }

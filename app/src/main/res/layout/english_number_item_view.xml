@@ -16,23 +16,27 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
+
+            android:background="@drawable/bg_image"
             android:id="@+id/linearLayout_English_number_Item">
 
         <TextView
-                android:text="100000"
+                android:text="100"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="30sp"
-                android:textColor="#000"
+                android:textSize="80sp"
+                android:textColor="#F5D80719"
+                android:fontFamily="@font/kelsonsansbg_old"
                 android:id="@+id/textView_ID_English_number"/>
         <TextView
                 android:text="100000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:textColor="#000"
+                android:fontFamily="@font/kelsonsansb_light"
                 android:id="@+id/textView_ID_English_number_Speeling"/>
     </LinearLayout>
 

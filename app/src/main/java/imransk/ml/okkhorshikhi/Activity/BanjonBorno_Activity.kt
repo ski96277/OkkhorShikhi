@@ -5,17 +5,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import imransk.ml.okkhorshikhi.AdapterClass.BanjonBorno_Adapter
 import imransk.ml.okkhorshikhi.R
 import imransk.ml.okkhorshikhi.RecyclerView_click.RecyclerItemClickListenr
 import kotlinx.android.synthetic.main.activity_banjon_borno.*
+import kotlinx.android.synthetic.main.activity_shorborno.*
 import kotlin.collections.ArrayList
 
 class BanjonBorno_Activity : AppCompatActivity() {
 
-    var banjon_borno_List = ArrayList<Int>()
+//    var banjon_borno_List = ArrayList<Int>()
+    var banjon_borno_List = ArrayList<String>()
     var banjon_borno_voice_list = ArrayList<Int>()
     var banjon_borno_image_details_list = ArrayList<Int>()
+    var banjonborno_example_text=ArrayList<String>()
 
     var mPlayer2: MediaPlayer = MediaPlayer()
 
@@ -23,46 +28,88 @@ class BanjonBorno_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_banjon_borno)
 
-        banjon_borno_List.add(R.drawable.banjon_borno_1)
-        banjon_borno_List.add(R.drawable.banjon_borno_2)
-        banjon_borno_List.add(R.drawable.banjon_borno_3)
-        banjon_borno_List.add(R.drawable.banjon_borno_4)
-        banjon_borno_List.add(R.drawable.banjon_borno_5)
-        banjon_borno_List.add(R.drawable.banjon_borno_6)
-        banjon_borno_List.add(R.drawable.banjon_borno_7)
-        banjon_borno_List.add(R.drawable.banjon_borno_8)
-        banjon_borno_List.add(R.drawable.banjon_borno_9)
-        banjon_borno_List.add(R.drawable.banjon_borno_10)
-        banjon_borno_List.add(R.drawable.banjon_borno_11)
-        banjon_borno_List.add(R.drawable.banjon_borno_12)
-        banjon_borno_List.add(R.drawable.banjon_borno_13)
-        banjon_borno_List.add(R.drawable.banjon_borno_14)
-        banjon_borno_List.add(R.drawable.banjon_borno_15)
-        banjon_borno_List.add(R.drawable.banjon_borno_16)
-        banjon_borno_List.add(R.drawable.banjon_borno_17)
-        banjon_borno_List.add(R.drawable.banjon_borno_18)
-        banjon_borno_List.add(R.drawable.banjon_borno_19)
-        banjon_borno_List.add(R.drawable.banjon_borno_20)
-        banjon_borno_List.add(R.drawable.banjon_borno_21)
-        banjon_borno_List.add(R.drawable.banjon_borno_22)
-        banjon_borno_List.add(R.drawable.banjon_borno_23)
-        banjon_borno_List.add(R.drawable.banjon_borno_24)
-        banjon_borno_List.add(R.drawable.banjon_borno_25)
-        banjon_borno_List.add(R.drawable.banjon_borno_26)
-        banjon_borno_List.add(R.drawable.banjon_borno_27)
-        banjon_borno_List.add(R.drawable.banjon_borno_28)
-        banjon_borno_List.add(R.drawable.banjon_borno_29)
-        banjon_borno_List.add(R.drawable.banjon_borno_30)
-        banjon_borno_List.add(R.drawable.banjon_borno_31)
-        banjon_borno_List.add(R.drawable.banjon_borno_32)
-        banjon_borno_List.add(R.drawable.banjon_borno_33)
-        banjon_borno_List.add(R.drawable.banjon_borno_34)
-        banjon_borno_List.add(R.drawable.banjon_borno_35)
-        banjon_borno_List.add(R.drawable.banjon_borno_36)
-        banjon_borno_List.add(R.drawable.banjon_borno_37)
-        banjon_borno_List.add(R.drawable.banjon_borno_38)
-        banjon_borno_List.add(R.drawable.banjon_borno_39)
-        banjon_borno_List.add(R.drawable.banjon_borno_40)
+        banjon_borno_List.add("ক")
+        banjon_borno_List.add("খ")
+        banjon_borno_List.add("গ")
+        banjon_borno_List.add("ঘ")
+        banjon_borno_List.add("ঙ")
+        banjon_borno_List.add("চ")
+        banjon_borno_List.add("ছ")
+        banjon_borno_List.add("জ")
+        banjon_borno_List.add("ঝ")
+        banjon_borno_List.add("ঞ")
+        banjon_borno_List.add("ট")
+        banjon_borno_List.add("ঠ")
+        banjon_borno_List.add("ড")
+        banjon_borno_List.add("ঢ")
+        banjon_borno_List.add("ণ")
+        banjon_borno_List.add("ত")
+        banjon_borno_List.add("থ")
+        banjon_borno_List.add("দ")
+        banjon_borno_List.add("ধ")
+        banjon_borno_List.add("ন")
+        banjon_borno_List.add("প")
+        banjon_borno_List.add("ফ")
+        banjon_borno_List.add("ব")
+        banjon_borno_List.add("ভ")
+        banjon_borno_List.add("ম")
+        banjon_borno_List.add("য")
+        banjon_borno_List.add("র")
+        banjon_borno_List.add("ল")
+        banjon_borno_List.add("শ")
+        banjon_borno_List.add("ষ")
+        banjon_borno_List.add("স")
+        banjon_borno_List.add("হ")
+        banjon_borno_List.add("ড়")
+        banjon_borno_List.add("ঢ়")
+        banjon_borno_List.add("য়")
+        banjon_borno_List.add("ৎ")
+        banjon_borno_List.add("ং")
+        banjon_borno_List.add("ঃ")
+        banjon_borno_List.add("ঁ")
+        banjon_borno_List.add("ক্ষ")
+
+
+        banjonborno_example_text.add("কাকাতুয়া")
+        banjonborno_example_text.add("খেঁকশিয়াল")
+        banjonborno_example_text.add("গরু")
+        banjonborno_example_text.add("ঘড়ি")
+        banjonborno_example_text.add("রঙ")
+        banjonborno_example_text.add("চশমা")
+        banjonborno_example_text.add("ছাতা")
+        banjonborno_example_text.add("জাহাজ")
+        banjonborno_example_text.add("ঝিনুক")
+        banjonborno_example_text.add("মিঞাও")
+        banjonborno_example_text.add("টিয়া")
+        banjonborno_example_text.add("ঠেলাগাড়ি")
+        banjonborno_example_text.add("ডিম")
+        banjonborno_example_text.add("ঢোল")
+        banjonborno_example_text.add("হরিণ")
+        banjonborno_example_text.add("তরমুজ")
+        banjonborno_example_text.add("থালা")
+        banjonborno_example_text.add("দোয়েল")
+        banjonborno_example_text.add("ধান")
+        banjonborno_example_text.add("নদী")
+        banjonborno_example_text.add("পাখি")
+        banjonborno_example_text.add("ফুল")
+        banjonborno_example_text.add("বই")
+        banjonborno_example_text.add("ভালুক")
+        banjonborno_example_text.add("ময়ূর")
+        banjonborno_example_text.add("যব")
+        banjonborno_example_text.add("রাজহাঁস")
+        banjonborno_example_text.add("লেবু")
+        banjonborno_example_text.add("শাপলা")
+        banjonborno_example_text.add("ষাঁড়")
+        banjonborno_example_text.add("সিংহ")
+        banjonborno_example_text.add("হাতি")
+        banjonborno_example_text.add("গাড়ি")
+        banjonborno_example_text.add("আষাঢ়")
+        banjonborno_example_text.add("পায়রা")
+        banjonborno_example_text.add("মৎস্য")
+        banjonborno_example_text.add("চিংড়ি")
+        banjonborno_example_text.add("দুঃখ")
+        banjonborno_example_text.add("চাঁদ")
+        banjonborno_example_text.add("ক্ষমা")
 
         banjon_borno_voice_list.add(R.raw.b01)
         banjon_borno_voice_list.add(R.raw.b02)
@@ -146,6 +193,8 @@ class BanjonBorno_Activity : AppCompatActivity() {
         banjon_borno_image_details_list.add(R.drawable.b37)
         banjon_borno_image_details_list.add(R.drawable.b38)
         banjon_borno_image_details_list.add(R.drawable.b39)
+        banjon_borno_image_details_list.add(R.drawable.b40)
+
 
 
         //set layout manager
@@ -158,7 +207,37 @@ class BanjonBorno_Activity : AppCompatActivity() {
         var banjonBorno_Adapter = BanjonBorno_Adapter(banjon_borno_List)
         banjon_borno_okkhor_recycler_ID.adapter = banjonBorno_Adapter
 //set adapter END
-        imageView_details_banjon_borno.setImageResource(banjon_borno_List[0])
+        imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[0])
+        bangonorno_example_details_TV_ID.text=banjonborno_example_text[0]
+        banjonorno_text_show_TV_ID.text=banjon_borno_List[0]
+//set first open start sound
+        mPlayer2.stop()
+        mPlayer2 = MediaPlayer.create(
+            this@BanjonBorno_Activity,
+            banjon_borno_voice_list[0]
+        )
+        mPlayer2.start()
+
+//set first animation
+
+        YoYo.with(Techniques.ZoomInUp)
+            .duration(1000)
+            .repeat(0)
+            .playOn(banjonorno_text_show_TV_ID)
+
+
+        YoYo.with(Techniques.DropOut)
+            .duration(700)
+            .repeat(0)
+            .playOn(imageView_details_banjon_borno)
+
+
+        YoYo.with(Techniques.RollIn)
+            .duration(1000)
+            .repeat(0)
+            .playOn(bangonorno_example_details_TV_ID)
+
+
 
 
 //set onclick listener on recycler View
@@ -169,10 +248,19 @@ class BanjonBorno_Activity : AppCompatActivity() {
                 object : RecyclerItemClickListenr.OnItemClickListener {
                     override fun onItemClick(view: View, position: Int) {
 
+                        //animation of item click
+                        YoYo.with(Techniques.BounceInLeft)
+                            .duration(500)
+                            .repeat(0)
+                            .playOn(view.findViewById(R.id.item_text_banjon_borno))
+
 
                         if (position != 39) {
 
+                            banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
                             imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
+                            bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
+
                             mPlayer2.stop()
                             mPlayer2 = MediaPlayer.create(
                                 this@BanjonBorno_Activity,
@@ -180,25 +268,138 @@ class BanjonBorno_Activity : AppCompatActivity() {
                             )
                             mPlayer2.start()
                         } else {
+                            //animation of item click
+                            YoYo.with(Techniques.BounceInLeft)
+                                .duration(500)
+                                .repeat(0)
+                                .playOn(view.findViewById(R.id.item_text_banjon_borno))
+
                             mPlayer2.stop()
-                            imageView_details_banjon_borno.setImageResource(banjon_borno_List[position])
+
+                            banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
+                            imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
+                            bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
+
                         }
+
+
+                        if (position%2==0){
+
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(banjonorno_text_show_TV_ID)
+
+
+                            YoYo.with(Techniques.DropOut)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details_banjon_borno)
+
+
+                            YoYo.with(Techniques.RollIn)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(bangonorno_example_details_TV_ID)
+
+                        }else{
+
+
+                            YoYo.with(Techniques.BounceInLeft)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(banjonorno_text_show_TV_ID)
+
+
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details_banjon_borno)
+
+
+                            YoYo.with(Techniques.BounceInRight)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(bangonorno_example_details_TV_ID)
+                        }
+
                     }
 
                     override fun onItemLongClick(view: View?, position: Int) {
+
                         if (position != 39) {
+
+                            //animation of item click
+                            YoYo.with(Techniques.BounceInLeft)
+                                .duration(500)
+                                .repeat(0)
+                                .playOn(view!!.findViewById(R.id.item_text_banjon_borno))
+
+                            banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
+
                             imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
+                            bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
 
                             mPlayer2.stop()
-
                             mPlayer2 = MediaPlayer.create(
                                 this@BanjonBorno_Activity,
                                 banjon_borno_voice_list[position]
                             )
                             mPlayer2.start()
                         } else {
+
+                            //animation of item click
+                            YoYo.with(Techniques.BounceInLeft)
+                                .duration(500)
+                                .repeat(0)
+                                .playOn(view!!.findViewById(R.id.item_text_banjon_borno))
+
+                            banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
+
                             mPlayer2.stop()
-                            imageView_details_banjon_borno.setImageResource(banjon_borno_List[position])
+                            imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
+                            bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
+
+                        }
+
+                        if (position%2==0){
+
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(banjonorno_text_show_TV_ID)
+
+
+                            YoYo.with(Techniques.DropOut)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details_banjon_borno)
+
+
+                            YoYo.with(Techniques.RollIn)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(bangonorno_example_details_TV_ID)
+
+                        }else{
+
+
+                            YoYo.with(Techniques.BounceInLeft)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(shorborno_view_TV_ID)
+
+
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details)
+
+
+                            YoYo.with(Techniques.BounceInRight)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(shorborno_exampale_name_TV_ID)
                         }
 
                     }
@@ -208,5 +409,12 @@ class BanjonBorno_Activity : AppCompatActivity() {
         //set onclick listener on recycler View  END
 
 
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mPlayer2.stop()
+        mPlayer2.release()
     }
 }

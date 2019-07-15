@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import imransk.ml.okkhorshikhi.R
 import kotlinx.android.synthetic.main.arbi_borno_item_view.view.*
 
-class Arbi_Borno_Adapter(var arbiBornoList: ArrayList<Int>) :RecyclerView.Adapter<Arbi_Borno_Adapter.viewHolder_Class>() {
+class Arbi_Borno_Adapter(var arbiBornoList: ArrayList<String>) :RecyclerView.Adapter<Arbi_Borno_Adapter.viewHolder_Class>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder_Class {
 
         var layoutInflater=LayoutInflater.from(parent.context).inflate(R.layout.arbi_borno_item_view,parent,false)
@@ -27,8 +27,8 @@ class Arbi_Borno_Adapter(var arbiBornoList: ArrayList<Int>) :RecyclerView.Adapte
 
 
     class viewHolder_Class(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun setvalue(s: Int) {
-            itemView.item_image_arbi_letter.setImageResource(s)
+        fun setvalue(s: String) {
+            itemView.item_text_arbi_letter.text=s
 
 
         }

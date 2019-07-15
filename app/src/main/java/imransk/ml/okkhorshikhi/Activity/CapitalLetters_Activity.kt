@@ -1,23 +1,29 @@
 package imransk.ml.okkhorshikhi.Activity
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import imransk.ml.okkhorshikhi.AdapterClass.CapitalLetters_Adapter
 import imransk.ml.okkhorshikhi.R
 import imransk.ml.okkhorshikhi.RecyclerView_click.RecyclerItemClickListenr
 import kotlinx.android.synthetic.main.activity_capital_letters.*
-import java.util.*
+import kotlinx.android.synthetic.main.activity_small_letters.*
 import kotlin.collections.ArrayList
 
 
 class CapitalLetters_Activity : AppCompatActivity() {
 
-    var capitalLetters_list = ArrayList<Int>()
+    var capitalLetters_list = ArrayList<String>()
+    var capitalLetters_Sound_list = ArrayList<Int>()
+    var mediaPlayer = MediaPlayer()
 
-    var capitalLetters_Images_details_list = ArrayList<Int>()
+    var capitalLetters_Images_list = ArrayList<Int>()
+    var capitalletters_image_text_details=ArrayList<String>()
 
     lateinit var textToSpeak: TextToSpeech
 
@@ -26,63 +32,117 @@ class CapitalLetters_Activity : AppCompatActivity() {
         setContentView(R.layout.activity_capital_letters)
 
 
-        capitalLetters_list.add(R.drawable.capital_letter_1)
-        capitalLetters_list.add(R.drawable.capital_letter_2)
-        capitalLetters_list.add(R.drawable.capital_letter_3)
-        capitalLetters_list.add(R.drawable.capital_letter_4)
-        capitalLetters_list.add(R.drawable.capital_letter_5)
-        capitalLetters_list.add(R.drawable.capital_letter_6)
-        capitalLetters_list.add(R.drawable.capital_letter_7)
-        capitalLetters_list.add(R.drawable.capital_letter_8)
-        capitalLetters_list.add(R.drawable.capital_letter_9)
-        capitalLetters_list.add(R.drawable.capital_letter_10)
+        capitalLetters_list.add("A")
+        capitalLetters_list.add("B")
+        capitalLetters_list.add("C")
+        capitalLetters_list.add("D")
+        capitalLetters_list.add("E")
+        capitalLetters_list.add("F")
+        capitalLetters_list.add("G")
+        capitalLetters_list.add("H")
+        capitalLetters_list.add("I")
+        capitalLetters_list.add("J")
 
-        capitalLetters_list.add(R.drawable.capital_letter_11)
-        capitalLetters_list.add(R.drawable.capital_letter_12)
-        capitalLetters_list.add(R.drawable.capital_letter_13)
-        capitalLetters_list.add(R.drawable.capital_letter_14)
-        capitalLetters_list.add(R.drawable.capital_letter_15)
-        capitalLetters_list.add(R.drawable.capital_letter_16)
-        capitalLetters_list.add(R.drawable.capital_letter_17)
-        capitalLetters_list.add(R.drawable.capital_letter_18)
-        capitalLetters_list.add(R.drawable.capital_letter_19)
-        capitalLetters_list.add(R.drawable.capital_letter_20)
+        capitalLetters_list.add("K")
+        capitalLetters_list.add("L")
+        capitalLetters_list.add("M")
+        capitalLetters_list.add("N")
+        capitalLetters_list.add("O")
+        capitalLetters_list.add("P")
+        capitalLetters_list.add("Q")
+        capitalLetters_list.add("R")
+        capitalLetters_list.add("S")
+        capitalLetters_list.add("T")
 
-        capitalLetters_list.add(R.drawable.capital_letter_21)
-        capitalLetters_list.add(R.drawable.capital_letter_22)
-        capitalLetters_list.add(R.drawable.capital_letter_23)
-        capitalLetters_list.add(R.drawable.capital_letter_24)
-        capitalLetters_list.add(R.drawable.capital_letter_25)
-        capitalLetters_list.add(R.drawable.capital_letter_26)
+        capitalLetters_list.add("U")
+        capitalLetters_list.add("V")
+        capitalLetters_list.add("W")
+        capitalLetters_list.add("X")
+        capitalLetters_list.add("Y")
+        capitalLetters_list.add("Z")
 
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_1)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_2)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_3)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_4)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_5)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_6)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_7)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_8)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_9)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_10)
+        capitalletters_image_text_details.add("Apple")
+        capitalletters_image_text_details.add("Ball")
+        capitalletters_image_text_details.add("Cat")
+        capitalletters_image_text_details.add("Dog")
+        capitalletters_image_text_details.add("Elephant")
+        capitalletters_image_text_details.add("Fish")
+        capitalletters_image_text_details.add("Goat")
+        capitalletters_image_text_details.add("Hen")
+        capitalletters_image_text_details.add("Ice Cream")
+        capitalletters_image_text_details.add("Juicy")
+        capitalletters_image_text_details.add("kangaroo")
+        capitalletters_image_text_details.add("Lion")
+        capitalletters_image_text_details.add("Mango")
+        capitalletters_image_text_details.add("Nest")
+        capitalletters_image_text_details.add("Orange")
+        capitalletters_image_text_details.add("Parrot")
+        capitalletters_image_text_details.add("Question")
+        capitalletters_image_text_details.add("Rocket")
+        capitalletters_image_text_details.add("Ship")
+        capitalletters_image_text_details.add("Tree")
+        capitalletters_image_text_details.add("Umbrella")
+        capitalletters_image_text_details.add("Van")
+        capitalletters_image_text_details.add("Watch")
+        capitalletters_image_text_details.add("Box")
+        capitalletters_image_text_details.add("yyy")
+        capitalletters_image_text_details.add("Zebra")
 
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_11)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_12)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_13)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_14)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_15)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_16)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_17)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_18)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_19)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_20)
+        capitalLetters_Sound_list.add(R.raw.a)
+        capitalLetters_Sound_list.add(R.raw.b)
+        capitalLetters_Sound_list.add(R.raw.c)
+        capitalLetters_Sound_list.add(R.raw.d)
+        capitalLetters_Sound_list.add(R.raw.e)
+        capitalLetters_Sound_list.add(R.raw.f)
+        capitalLetters_Sound_list.add(R.raw.g)
+        capitalLetters_Sound_list.add(R.raw.h)
+        capitalLetters_Sound_list.add(R.raw.i)
+        capitalLetters_Sound_list.add(R.raw.j)
+        capitalLetters_Sound_list.add(R.raw.k)
+        capitalLetters_Sound_list.add(R.raw.l)
+        capitalLetters_Sound_list.add(R.raw.m)
+        capitalLetters_Sound_list.add(R.raw.n)
+        capitalLetters_Sound_list.add(R.raw.o)
+        capitalLetters_Sound_list.add(R.raw.p)
+        capitalLetters_Sound_list.add(R.raw.q)
+        capitalLetters_Sound_list.add(R.raw.r)
+        capitalLetters_Sound_list.add(R.raw.s)
+        capitalLetters_Sound_list.add(R.raw.t)
+        capitalLetters_Sound_list.add(R.raw.u)
+        capitalLetters_Sound_list.add(R.raw.v)
+        capitalLetters_Sound_list.add(R.raw.w)
+        capitalLetters_Sound_list.add(R.raw.x)
+        capitalLetters_Sound_list.add(R.raw.y)
+        capitalLetters_Sound_list.add(R.raw.z)
 
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_21)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_22)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_23)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_24)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_25)
-        capitalLetters_Images_details_list.add(R.drawable.capital_letter_details_images_26)
+        capitalLetters_Images_list.add(R.drawable.a_image)
+        capitalLetters_Images_list.add(R.drawable.b_image)
+        capitalLetters_Images_list.add(R.drawable.c_image)
+        capitalLetters_Images_list.add(R.drawable.d_image)
+        capitalLetters_Images_list.add(R.drawable.e_image)
+        capitalLetters_Images_list.add(R.drawable.f_image)
+        capitalLetters_Images_list.add(R.drawable.g_image)
+        capitalLetters_Images_list.add(R.drawable.h_image)
+        capitalLetters_Images_list.add(R.drawable.i_image)
+
+        capitalLetters_Images_list.add(R.drawable.j_image)
+        capitalLetters_Images_list.add(R.drawable.k_image)
+        capitalLetters_Images_list.add(R.drawable.l_image)
+        capitalLetters_Images_list.add(R.drawable.m_image)
+        capitalLetters_Images_list.add(R.drawable.n_image)
+        capitalLetters_Images_list.add(R.drawable.o_image)
+        capitalLetters_Images_list.add(R.drawable.p_image)
+        capitalLetters_Images_list.add(R.drawable.q_image)
+        capitalLetters_Images_list.add(R.drawable.r_image)
+        capitalLetters_Images_list.add(R.drawable.s_image)
+
+        capitalLetters_Images_list.add(R.drawable.t_image)
+        capitalLetters_Images_list.add(R.drawable.u_image)
+        capitalLetters_Images_list.add(R.drawable.v_image)
+        capitalLetters_Images_list.add(R.drawable.w_image)
+        capitalLetters_Images_list.add(R.drawable.x_image)
+        capitalLetters_Images_list.add(R.drawable.y_image)
+        capitalLetters_Images_list.add(R.drawable.z_image)
 
 
         //set layout manager
@@ -96,16 +156,33 @@ class CapitalLetters_Activity : AppCompatActivity() {
         capital_letters_recycler_ID.adapter = capitalLetters_Adapter
         //set Adapter END
 
-        imageView_details_capital_letters.setImageResource(capitalLetters_Images_details_list[0])
+        capital_text_show_TV_ID.text = capitalLetters_list[0]
+        imageView_details_capital_letters.setImageResource(capitalLetters_Images_list[0])
+        capital_letter_image_nameTV_ID.text=capitalletters_image_text_details[0]
+//set first time sound
+        mediaPlayer.stop()
+        mediaPlayer=MediaPlayer.create(this@CapitalLetters_Activity,capitalLetters_Sound_list[0])
+        mediaPlayer.start()
 
-  //set default speak Start
-        textToSpeak = TextToSpeech(this, TextToSpeech.OnInitListener {
 
-            textToSpeak.language = Locale.UK
-            textToSpeak.speak("A", TextToSpeech.QUEUE_FLUSH, null)
+       //set first time animation
+            YoYo.with(Techniques.ZoomInUp)
+                .duration(1000)
+                .repeat(0)
+                .playOn(capital_text_show_TV_ID)
 
-        })
-  //set default speak END
+
+            YoYo.with(Techniques.DropOut)
+                .duration(700)
+                .repeat(0)
+                .playOn(imageView_details_capital_letters)
+
+
+            YoYo.with(Techniques.RollIn)
+                .duration(1000)
+                .repeat(0)
+                .playOn(capital_letter_image_nameTV_ID)
+
 
 
         capital_letters_recycler_ID.addOnItemTouchListener(
@@ -115,130 +192,127 @@ class CapitalLetters_Activity : AppCompatActivity() {
                 object : RecyclerItemClickListenr.OnItemClickListener {
                     override fun onItemClick(view: View, position: Int) {
 
-                        imageView_details_capital_letters.setImageResource(capitalLetters_Images_details_list[position])
+                        //animation of item click
+                        YoYo.with(Techniques.BounceInLeft)
+                            .duration(500)
+                            .repeat(0)
+                            .playOn(view.findViewById(R.id.item_Text_capital_letter))
 
-                      callSpeakingMethod(position)
+                        mediaPlayer.stop()
+                        mediaPlayer=MediaPlayer.create(this@CapitalLetters_Activity,capitalLetters_Sound_list[position])
+                        mediaPlayer.start()
+
+                        capital_text_show_TV_ID.text = capitalLetters_list[position]
+                        capital_letter_image_nameTV_ID.text=capitalletters_image_text_details[position]
+
+                        imageView_details_capital_letters.setImageResource(capitalLetters_Images_list[position])
+
+
+                        //set animation
+                        if (position%2==0){
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(capital_text_show_TV_ID)
+
+
+                            YoYo.with(Techniques.DropOut)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details_capital_letters)
+
+
+                            YoYo.with(Techniques.RollIn)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(capital_letter_image_nameTV_ID)
+                        }else{
+
+                            YoYo.with(Techniques.BounceInLeft)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(capital_text_show_TV_ID)
+
+
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details_capital_letters)
+
+
+                            YoYo.with(Techniques.BounceInRight)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(capital_letter_image_nameTV_ID)
+                        }
+
 
                     }
 
                     override fun onItemLongClick(view: View?, position: Int) {
-                        imageView_details_capital_letters.setImageResource(capitalLetters_Images_details_list[position])
-                        callSpeakingMethod(position)
+
+                        //animation of item click
+                        YoYo.with(Techniques.BounceInLeft)
+                            .duration(500)
+                            .repeat(0)
+                            .playOn(view!!.findViewById(R.id.item_Text_capital_letter))
+
+                        mediaPlayer.stop()
+                        mediaPlayer=MediaPlayer.create(this@CapitalLetters_Activity,capitalLetters_Sound_list[position])
+                        mediaPlayer.start()
+
+                        capital_text_show_TV_ID.text = capitalLetters_list[position]
+                        capital_letter_image_nameTV_ID.text=capitalletters_image_text_details[position]
+
+                        imageView_details_capital_letters.setImageResource(capitalLetters_Images_list[position])
+
+   //set animation
+                        if (position%2==0){
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(capital_text_show_TV_ID)
+
+
+                            YoYo.with(Techniques.DropOut)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details_capital_letters)
+
+
+                            YoYo.with(Techniques.RollIn)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(capital_letter_image_nameTV_ID)
+                        }else{
+
+                            YoYo.with(Techniques.BounceInLeft)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(capital_text_show_TV_ID)
+
+
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details_capital_letters)
+
+
+                            YoYo.with(Techniques.BounceInRight)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(capital_letter_image_nameTV_ID)
+                        }
 
                     }
-
                 })
         )
-
     }
 
-    private fun callSpeakingMethod(position: Int) {
-        if (position == 0) {
-            textToSpeak.speak("A", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 1) {
-            textToSpeak.speak("B", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 2) {
-            textToSpeak.speak("C", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 3) {
-            textToSpeak.speak("D", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 4) {
-            textToSpeak.speak("E", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 5) {
-            textToSpeak.speak("F", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 6) {
-            textToSpeak.speak("G", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 7) {
-            textToSpeak.speak("H", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 8) {
-            textToSpeak.speak("I", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 9) {
-            textToSpeak.speak("J", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 10) {
-            textToSpeak.speak("K", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 11) {
-            textToSpeak.speak("L", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position ==12 ) {
-            textToSpeak.speak("M", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 13) {
-            textToSpeak.speak("N", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 14) {
-            textToSpeak.speak("O", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 15) {
-            textToSpeak.speak("P", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 16) {
-            textToSpeak.speak("Q", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 17) {
-            textToSpeak.speak("R", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 18) {
-            textToSpeak.speak("S", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 19) {
-            textToSpeak.speak("T", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 20) {
-            textToSpeak.speak("U", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position ==21 ) {
-            textToSpeak.speak("V", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 22) {
-            textToSpeak.speak("W", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 23) {
-            textToSpeak.speak("X", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 24) {
-            textToSpeak.speak("Y", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
-        if (position == 25) {
-            textToSpeak.speak("Z", TextToSpeech.QUEUE_FLUSH, null)
-            return
-        }
 
-
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.stop()
+        mediaPlayer.release()
     }
-
 }

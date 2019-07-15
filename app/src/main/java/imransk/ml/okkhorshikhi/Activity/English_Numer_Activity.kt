@@ -1,10 +1,13 @@
 package imransk.ml.okkhorshikhi.Activity
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import imransk.ml.okkhorshikhi.AdapterClass.English_Numer_Adapter
 import imransk.ml.okkhorshikhi.R
 import imransk.ml.okkhorshikhi.RecyclerView_click.RecyclerItemClickListenr
@@ -16,6 +19,9 @@ class English_Numer_Activity : AppCompatActivity() {
 
     var number_english_speeling = ArrayList<String>()
     lateinit var textToSpeak: TextToSpeech
+
+    var number_sound=ArrayList<Int>()
+    var mediaPlayer=MediaPlayer()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -133,6 +139,108 @@ class English_Numer_Activity : AppCompatActivity() {
         number_english_speeling.add("Ninety-Nine")
         number_english_speeling.add("Hundred")
 
+        number_sound.add(R.raw.english_0)
+        number_sound.add(R.raw.english_1)
+        number_sound.add(R.raw.english_2)
+        number_sound.add(R.raw.english_3)
+        number_sound.add(R.raw.english_4)
+        number_sound.add(R.raw.english_5)
+        number_sound.add(R.raw.english_6)
+        number_sound.add(R.raw.english_7)
+        number_sound.add(R.raw.english_8)
+        number_sound.add(R.raw.english_9)
+        number_sound.add(R.raw.english_10)
+        number_sound.add(R.raw.english_11)
+        number_sound.add(R.raw.english_12)
+        number_sound.add(R.raw.english_13)
+        number_sound.add(R.raw.english_14)
+        number_sound.add(R.raw.english_15)
+        number_sound.add(R.raw.english_16)
+        number_sound.add(R.raw.english_17)
+        number_sound.add(R.raw.english_18)
+        number_sound.add(R.raw.english_19)
+        number_sound.add(R.raw.english_20)
+        number_sound.add(R.raw.english_21)
+        number_sound.add(R.raw.english_22)
+        number_sound.add(R.raw.english_23)
+        number_sound.add(R.raw.english_24)
+        number_sound.add(R.raw.english_25)
+        number_sound.add(R.raw.english_26)
+        number_sound.add(R.raw.english_27)
+        number_sound.add(R.raw.english_28)
+        number_sound.add(R.raw.english_29)
+        number_sound.add(R.raw.english_30)
+        number_sound.add(R.raw.english_31)
+        number_sound.add(R.raw.english_32)
+        number_sound.add(R.raw.english_33)
+        number_sound.add(R.raw.english_34)
+        number_sound.add(R.raw.english_35)
+        number_sound.add(R.raw.english_36)
+        number_sound.add(R.raw.english_37)
+        number_sound.add(R.raw.english_38)
+        number_sound.add(R.raw.english_39)
+        number_sound.add(R.raw.english_40)
+        number_sound.add(R.raw.english_41)
+        number_sound.add(R.raw.english_42)
+        number_sound.add(R.raw.english_43)
+        number_sound.add(R.raw.english_44)
+        number_sound.add(R.raw.english_45)
+        number_sound.add(R.raw.english_46)
+        number_sound.add(R.raw.english_47)
+        number_sound.add(R.raw.english_48)
+        number_sound.add(R.raw.english_49)
+        number_sound.add(R.raw.english_50)
+        number_sound.add(R.raw.english_51)
+        number_sound.add(R.raw.english_52)
+        number_sound.add(R.raw.english_53)
+        number_sound.add(R.raw.english_54)
+        number_sound.add(R.raw.english_55)
+        number_sound.add(R.raw.english_56)
+        number_sound.add(R.raw.english_57)
+        number_sound.add(R.raw.english_58)
+        number_sound.add(R.raw.english_59)
+        number_sound.add(R.raw.english_60)
+        number_sound.add(R.raw.english_61)
+        number_sound.add(R.raw.english_62)
+        number_sound.add(R.raw.english_63)
+        number_sound.add(R.raw.english_64)
+        number_sound.add(R.raw.english_65)
+        number_sound.add(R.raw.english_66)
+        number_sound.add(R.raw.english_67)
+        number_sound.add(R.raw.english_68)
+        number_sound.add(R.raw.english_69)
+        number_sound.add(R.raw.english_70)
+        number_sound.add(R.raw.english_71)
+        number_sound.add(R.raw.english_72)
+        number_sound.add(R.raw.english_73)
+        number_sound.add(R.raw.english_74)
+        number_sound.add(R.raw.english_75)
+        number_sound.add(R.raw.english_76)
+        number_sound.add(R.raw.english_77)
+        number_sound.add(R.raw.english_78)
+        number_sound.add(R.raw.english_79)
+        number_sound.add(R.raw.english_80)
+        number_sound.add(R.raw.english_81)
+        number_sound.add(R.raw.english_82)
+        number_sound.add(R.raw.english_83)
+        number_sound.add(R.raw.english_84)
+        number_sound.add(R.raw.english_85)
+        number_sound.add(R.raw.english_86)
+        number_sound.add(R.raw.english_87)
+        number_sound.add(R.raw.english_88)
+        number_sound.add(R.raw.english_89)
+        number_sound.add(R.raw.english_90)
+        number_sound.add(R.raw.english_91)
+        number_sound.add(R.raw.english_92)
+        number_sound.add(R.raw.english_93)
+        number_sound.add(R.raw.english_94)
+        number_sound.add(R.raw.english_95)
+        number_sound.add(R.raw.english_96)
+        number_sound.add(R.raw.english_97)
+        number_sound.add(R.raw.english_98)
+        number_sound.add(R.raw.english_99)
+        number_sound.add(R.raw.english_100)
+
         var layoutManager = GridLayoutManager(this, 2)
         english_number_recyclerView_ID.layoutManager = layoutManager
 
@@ -141,12 +249,10 @@ class English_Numer_Activity : AppCompatActivity() {
 
 
         //set default speak Start
-        textToSpeak = TextToSpeech(this, TextToSpeech.OnInitListener {
+        mediaPlayer.stop()
+        mediaPlayer= MediaPlayer.create(this@English_Numer_Activity,number_sound[0])
+        mediaPlayer.start()
 
-            textToSpeak.language = Locale.US
-            textToSpeak.speak("0", TextToSpeech.QUEUE_FLUSH, null)
-
-        })
         //set default speak END
 
 
@@ -156,11 +262,33 @@ class English_Numer_Activity : AppCompatActivity() {
                 english_number_recyclerView_ID,
                 object : RecyclerItemClickListenr.OnItemClickListener {
                     override fun onItemClick(view: View, position: Int) {
-                        callSpeakingMethod(position)
-                    }
 
+
+                        mediaPlayer.stop()
+                        mediaPlayer= MediaPlayer.create(this@English_Numer_Activity,number_sound[position])
+                        mediaPlayer.start()
+
+                        //animation of item click
+                        YoYo.with(Techniques.BounceInLeft)
+                            .duration(500)
+                            .repeat(0)
+                            .playOn(view.findViewById(R.id.linearLayout_English_number_Item))
+
+
+                    }
                     override fun onItemLongClick(view: View?, position: Int) {
-                        callSpeakingMethod(position)
+                        mediaPlayer.stop()
+                        mediaPlayer= MediaPlayer.create(this@English_Numer_Activity,number_sound[position])
+                        mediaPlayer.start()
+
+                        //animation of item click
+
+                        YoYo.with(Techniques.BounceInLeft)
+                            .duration(500)
+                            .repeat(0)
+                            .playOn(view!!.findViewById(R.id.linearLayout_English_number_Item))
+
+
 
                     }
 
@@ -169,8 +297,11 @@ class English_Numer_Activity : AppCompatActivity() {
 
     }
 
-    private fun callSpeakingMethod(position: Int) {
-        textToSpeak.speak(position.toString(), TextToSpeech.QUEUE_FLUSH, null)
 
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.stop()
+        mediaPlayer.release()
     }
+
 }
