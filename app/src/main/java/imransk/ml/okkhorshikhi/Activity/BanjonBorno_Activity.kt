@@ -212,6 +212,7 @@ class BanjonBorno_Activity : AppCompatActivity() {
         banjonorno_text_show_TV_ID.text=banjon_borno_List[0]
 //set first open start sound
         mPlayer2.stop()
+        mPlayer2.release()
         mPlayer2 = MediaPlayer.create(
             this@BanjonBorno_Activity,
             banjon_borno_voice_list[0]
@@ -262,6 +263,7 @@ class BanjonBorno_Activity : AppCompatActivity() {
                             bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
 
                             mPlayer2.stop()
+                            mPlayer2.release()
                             mPlayer2 = MediaPlayer.create(
                                 this@BanjonBorno_Activity,
                                 banjon_borno_voice_list[position]
@@ -275,6 +277,7 @@ class BanjonBorno_Activity : AppCompatActivity() {
                                 .playOn(view.findViewById(R.id.item_text_banjon_borno))
 
                             mPlayer2.stop()
+                            mPlayer2.release()
 
                             banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
                             imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
@@ -341,6 +344,7 @@ class BanjonBorno_Activity : AppCompatActivity() {
                             bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
 
                             mPlayer2.stop()
+                            mPlayer2.release()
                             mPlayer2 = MediaPlayer.create(
                                 this@BanjonBorno_Activity,
                                 banjon_borno_voice_list[position]
@@ -357,6 +361,7 @@ class BanjonBorno_Activity : AppCompatActivity() {
                             banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
 
                             mPlayer2.stop()
+                            mPlayer2.release()
                             imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
                             bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
 

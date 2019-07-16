@@ -51,7 +51,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView_details_small_letters"/>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="412dp"
+            android:layout_width="match_parent"
             android:layout_height="176dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

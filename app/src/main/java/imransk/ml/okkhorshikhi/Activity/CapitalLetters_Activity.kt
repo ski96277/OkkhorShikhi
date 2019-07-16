@@ -161,6 +161,7 @@ class CapitalLetters_Activity : AppCompatActivity() {
         capital_letter_image_nameTV_ID.text=capitalletters_image_text_details[0]
 //set first time sound
         mediaPlayer.stop()
+        mediaPlayer.release()
         mediaPlayer=MediaPlayer.create(this@CapitalLetters_Activity,capitalLetters_Sound_list[0])
         mediaPlayer.start()
 
@@ -199,6 +200,7 @@ class CapitalLetters_Activity : AppCompatActivity() {
                             .playOn(view.findViewById(R.id.item_Text_capital_letter))
 
                         mediaPlayer.stop()
+                        mediaPlayer.release()
                         mediaPlayer=MediaPlayer.create(this@CapitalLetters_Activity,capitalLetters_Sound_list[position])
                         mediaPlayer.start()
 
@@ -258,6 +260,7 @@ class CapitalLetters_Activity : AppCompatActivity() {
                             .playOn(view!!.findViewById(R.id.item_Text_capital_letter))
 
                         mediaPlayer.stop()
+                        mediaPlayer.release()
                         mediaPlayer=MediaPlayer.create(this@CapitalLetters_Activity,capitalLetters_Sound_list[position])
                         mediaPlayer.start()
 

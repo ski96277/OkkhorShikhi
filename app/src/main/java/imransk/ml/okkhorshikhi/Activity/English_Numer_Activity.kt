@@ -250,6 +250,7 @@ class English_Numer_Activity : AppCompatActivity() {
 
         //set default speak Start
         mediaPlayer.stop()
+        mediaPlayer.release()
         mediaPlayer= MediaPlayer.create(this@English_Numer_Activity,number_sound[0])
         mediaPlayer.start()
 
@@ -265,6 +266,7 @@ class English_Numer_Activity : AppCompatActivity() {
 
 
                         mediaPlayer.stop()
+                        mediaPlayer.release()
                         mediaPlayer= MediaPlayer.create(this@English_Numer_Activity,number_sound[position])
                         mediaPlayer.start()
 

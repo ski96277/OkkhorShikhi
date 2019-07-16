@@ -19,11 +19,14 @@
                 android:layout_height="wrap_content"
                 app:cardElevation="10dp"
                 android:id="@+id/cardView"
+                android:backgroundTint="#9AA52A"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="25dp"
                 android:layout_marginStart="8dp">
             <ImageButton
+
+                    android:backgroundTint="#9AA52A"
                     android:src="@drawable/shorborno_1"
                     android:layout_width="125dp"
                     android:layout_height="120dp"
@@ -37,11 +40,13 @@
                 android:layout_height="wrap_content"
                 app:cardElevation="10dp"
                 android:id="@+id/cardView2"
+                android:backgroundTint="#9AA52A"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="8dp">
             <ImageButton
+                    android:backgroundTint="#9AA52A"
                     android:src="@drawable/banjon_borno_1"
                     android:layout_width="125dp"
                     android:layout_height="120dp"
@@ -55,10 +60,12 @@
                 android:layout_height="wrap_content"
                 app:cardElevation="10dp"
                 android:id="@+id/cardView3"
+                android:backgroundTint="#9AA52A"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="220dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp">
             <ImageButton
+                    android:backgroundTint="#9AA52A"
                     android:src="@drawable/capital_letter_1"
                     android:layout_width="125dp"
                     android:layout_height="120dp"
@@ -72,11 +79,13 @@
                 android:layout_height="wrap_content"
                 app:cardElevation="10dp"
                 android:id="@+id/cardView4"
+                android:backgroundTint="#9AA52A"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="220dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="8dp">
             <ImageButton
+                    android:backgroundTint="#9AA52A"
                     android:src="@drawable/small_letter_1"
                     android:layout_width="125dp"
                     android:layout_height="120dp"
@@ -90,10 +99,12 @@
                 app:cardElevation="10dp"
                 android:id="@+id/cardView5"
 
+                android:backgroundTint="#9AA52A"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="404dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp">
             <ImageButton
+                    android:backgroundTint="#9AA52A"
                     android:src="@drawable/bangla_number_1"
                     android:layout_width="125dp"
                     android:layout_height="120dp"
@@ -108,10 +119,12 @@
                 app:cardElevation="10dp"
                 android:id="@+id/cardView6"
 
+                android:backgroundTint="#9AA52A"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="404dp"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
             <ImageButton
+                    android:backgroundTint="#9AA52A"
                     android:src="@drawable/english_onkho_1"
                     android:layout_width="125dp"
                     android:layout_height="120dp"
@@ -124,6 +137,7 @@
                 android:layout_height="wrap_content"
                 app:cardElevation="10dp"
                 android:id="@+id/cardVie7"
+                android:backgroundTint="#9AA52A"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="590dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -133,6 +147,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginBottom="10dp">
             <ImageButton
+                    android:backgroundTint="#9AA52A"
                     android:src="@drawable/arbi_borno_1"
                     android:layout_width="125dp"
                     android:layout_height="120dp"

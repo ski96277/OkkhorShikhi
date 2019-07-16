@@ -48,8 +48,9 @@ var mediaPlayer=MediaPlayer()
         arbi_borno_List.add("ل")
         arbi_borno_List.add("م")
         arbi_borno_List.add("ن")
-        arbi_borno_List.add("ه")
         arbi_borno_List.add("و")
+        arbi_borno_List.add("ه")
+        arbi_borno_List.add("ء")
         arbi_borno_List.add("ي")
 
 
@@ -124,6 +125,7 @@ var mediaPlayer=MediaPlayer()
         textview_details_arbi_borno.text = arbi_borno_List[0]
 
         mediaPlayer.stop()
+        mediaPlayer.release()
         mediaPlayer= MediaPlayer.create(this@Arbi_Borno_Activity,arbi_Letters_Sound_list[0])
         mediaPlayer.start()
 
@@ -133,6 +135,7 @@ var mediaPlayer=MediaPlayer()
 
 
                 mediaPlayer.stop()
+                mediaPlayer.release()
                 mediaPlayer= MediaPlayer.create(this@Arbi_Borno_Activity,arbi_Letters_Sound_list[position])
                 mediaPlayer.start()
 
@@ -150,6 +153,7 @@ var mediaPlayer=MediaPlayer()
             override fun onItemLongClick(view: View?, position: Int) {
 
                 mediaPlayer.stop()
+                mediaPlayer.release()
                 mediaPlayer= MediaPlayer.create(this@Arbi_Borno_Activity,arbi_Letters_Sound_list[position])
                 mediaPlayer.start()
 

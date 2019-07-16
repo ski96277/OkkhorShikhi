@@ -132,6 +132,7 @@ class Shorborno_Activity : AppCompatActivity() {
                         shorborno_exampale_name_TV_ID.text=shororno_example[position]
 
                         mPlayer2.stop()
+                        mPlayer2.release()
                         mPlayer2=MediaPlayer.create(this@Shorborno_Activity,shorbborno_okkhor_sound[position])
                         mPlayer2.start()
 
@@ -189,6 +190,7 @@ class Shorborno_Activity : AppCompatActivity() {
                         shorborno_exampale_name_TV_ID.text=shororno_example[position]
 
                         mPlayer2.stop()
+                        mPlayer2.release()
                         mPlayer2=MediaPlayer.create(this@Shorborno_Activity,shorbborno_okkhor_sound[position])
                         mPlayer2.start()
 

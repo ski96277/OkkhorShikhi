@@ -19,27 +19,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 //animation for item
         YoYo.with(Techniques.SlideInRight)
-            .duration(1000)
+            .duration(2000)
             .repeat(0)
             .playOn(shorborno_btn_ID)
 //animation for item
         YoYo.with(Techniques.SlideInRight)
-            .duration(1000)
+            .duration(2000)
             .repeat(0)
             .playOn(capital_letters_btn_ID)
 //animation for item
         YoYo.with(Techniques.SlideInRight)
-            .duration(1000)
+            .duration(2000)
             .repeat(0)
             .playOn(number_bangla_btn_ID)
 //animation for item
         YoYo.with(Techniques.SlideInLeft)
-            .duration(1000)
+            .duration(2000)
             .repeat(0)
             .playOn(banjon_borno_btn_ID)
 //animation for item
         YoYo.with(Techniques.SlideInLeft)
-            .duration(1000)
+            .duration(2000)
             .repeat(0)
             .playOn(small_letters_btn_ID)
 //animation for item

@@ -154,6 +154,7 @@ class SmallLetters_Activity : AppCompatActivity() {
 
 //set first time sound
         mediaPlayer.stop()
+        mediaPlayer.release()
         mediaPlayer = MediaPlayer.create(this@SmallLetters_Activity, small_leter_Seaking[0])
         mediaPlayer.start()
 
@@ -197,6 +198,7 @@ class SmallLetters_Activity : AppCompatActivity() {
                         small_letter_image_Details_TV_ID.text = smallLetters_details_text[position]
 
                         mediaPlayer.stop()
+                        mediaPlayer.release()
                         mediaPlayer = MediaPlayer.create(this@SmallLetters_Activity, small_leter_Seaking[position])
                         mediaPlayer.start()
 //set animation
@@ -257,6 +259,7 @@ class SmallLetters_Activity : AppCompatActivity() {
                         small_letter_image_Details_TV_ID.text = smallLetters_details_text[position]
 
                         mediaPlayer.stop()
+                        mediaPlayer.release()
                         mediaPlayer = MediaPlayer.create(this@SmallLetters_Activity, small_leter_Seaking[position])
                         mediaPlayer.start()
 

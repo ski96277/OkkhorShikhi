@@ -1,5 +1,6 @@
 package imransk.ml.okkhorshikhi.Activity
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,8 +13,11 @@ import imransk.ml.okkhorshikhi.RecyclerView_click.RecyclerItemClickListenr
 import kotlinx.android.synthetic.main.activity_bangla__number.*
 
 class Bangla_Number_Activity : AppCompatActivity() {
-    var bangla_Number_list=ArrayList<String>()
-    var bangla_Number_kothay_list=ArrayList<String>()
+    var bangla_Number_list = ArrayList<String>()
+    var bangla_Number_kothay_list = ArrayList<String>()
+    var bangla_Number_Sound = ArrayList<Int>()
+
+    var mediaPlayer=MediaPlayer()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -242,37 +246,165 @@ class Bangla_Number_Activity : AppCompatActivity() {
         bangla_Number_kothay_list.add("নিরানব্বই")
         bangla_Number_kothay_list.add("এক শো")
 
-        var gridLayoutManager=GridLayoutManager(this,2)
-        bangla_number_recyclerView_ID.layoutManager=gridLayoutManager
 
-        var banglaNumberAdapter=Bangla_Number_Adapter(bangla_Number_list,bangla_Number_kothay_list)
-        bangla_number_recyclerView_ID.adapter=banglaNumberAdapter
+        bangla_Number_Sound.add(R.raw.bangla_0)
+        bangla_Number_Sound.add(R.raw.bangla_1)
+        bangla_Number_Sound.add(R.raw.bangla_2)
+        bangla_Number_Sound.add(R.raw.bangla_3)
+        bangla_Number_Sound.add(R.raw.bangla_4)
+        bangla_Number_Sound.add(R.raw.bangla_5)
+        bangla_Number_Sound.add(R.raw.bangla_6)
+        bangla_Number_Sound.add(R.raw.bangla_7)
+        bangla_Number_Sound.add(R.raw.bangla_8)
+        bangla_Number_Sound.add(R.raw.bangla_9)
+        bangla_Number_Sound.add(R.raw.bangla_10)
+        bangla_Number_Sound.add(R.raw.bangla_11)
+        bangla_Number_Sound.add(R.raw.bangla_12)
+        bangla_Number_Sound.add(R.raw.bangla_13)
+        bangla_Number_Sound.add(R.raw.bangla_14)
+        bangla_Number_Sound.add(R.raw.bangla_15)
+        bangla_Number_Sound.add(R.raw.bangla_16)
+        bangla_Number_Sound.add(R.raw.bangla_17)
+        bangla_Number_Sound.add(R.raw.bangla_18)
+        bangla_Number_Sound.add(R.raw.bangla_19)
+        bangla_Number_Sound.add(R.raw.bangla_20)
+        bangla_Number_Sound.add(R.raw.bangla_21)
+        bangla_Number_Sound.add(R.raw.bangla_22)
+        bangla_Number_Sound.add(R.raw.bangla_23)
+        bangla_Number_Sound.add(R.raw.bangla_24)
+        bangla_Number_Sound.add(R.raw.bangla_25)
+        bangla_Number_Sound.add(R.raw.bangla_26)
+        bangla_Number_Sound.add(R.raw.bangla_27)
+        bangla_Number_Sound.add(R.raw.bangla_28)
+        bangla_Number_Sound.add(R.raw.bangla_29)
+        bangla_Number_Sound.add(R.raw.bangla_30)
+        bangla_Number_Sound.add(R.raw.bangla_31)
+        bangla_Number_Sound.add(R.raw.bangla_32)
+        bangla_Number_Sound.add(R.raw.bangla_33)
+        bangla_Number_Sound.add(R.raw.bangla_34)
+        bangla_Number_Sound.add(R.raw.bangla_35)
+        bangla_Number_Sound.add(R.raw.bangla_36)
+        bangla_Number_Sound.add(R.raw.bangla_37)
+        bangla_Number_Sound.add(R.raw.bangla_38)
+        bangla_Number_Sound.add(R.raw.bangla_39)
+        bangla_Number_Sound.add(R.raw.bangla_40)
+        bangla_Number_Sound.add(R.raw.bangla_41)
+        bangla_Number_Sound.add(R.raw.bangla_42)
+        bangla_Number_Sound.add(R.raw.bangla_43)
+        bangla_Number_Sound.add(R.raw.bangla_44)
+        bangla_Number_Sound.add(R.raw.bangla_45)
+        bangla_Number_Sound.add(R.raw.bangla_46)
+        bangla_Number_Sound.add(R.raw.bangla_47)
+        bangla_Number_Sound.add(R.raw.bangla_48)
+        bangla_Number_Sound.add(R.raw.bangla_49)
+        bangla_Number_Sound.add(R.raw.bangla_50)
+        bangla_Number_Sound.add(R.raw.bangla_51)
+        bangla_Number_Sound.add(R.raw.bangla_52)
+        bangla_Number_Sound.add(R.raw.bangla_53)
+        bangla_Number_Sound.add(R.raw.bangla_54)
+        bangla_Number_Sound.add(R.raw.bangla_55)
+        bangla_Number_Sound.add(R.raw.bangla_56)
+        bangla_Number_Sound.add(R.raw.bangla_57)
+        bangla_Number_Sound.add(R.raw.bangla_58)
+        bangla_Number_Sound.add(R.raw.bangla_59)
+        bangla_Number_Sound.add(R.raw.bangla_60)
+        bangla_Number_Sound.add(R.raw.bangla_61)
+        bangla_Number_Sound.add(R.raw.bangla_62)
+        bangla_Number_Sound.add(R.raw.bangla_63)
+        bangla_Number_Sound.add(R.raw.bangla_64)
+        bangla_Number_Sound.add(R.raw.bangla_65)
+        bangla_Number_Sound.add(R.raw.bangla_66)
+        bangla_Number_Sound.add(R.raw.bangla_67)
+        bangla_Number_Sound.add(R.raw.bangla_68)
+        bangla_Number_Sound.add(R.raw.bangla_69)
+        bangla_Number_Sound.add(R.raw.bangla_70)
+        bangla_Number_Sound.add(R.raw.bangla_71)
+        bangla_Number_Sound.add(R.raw.bangla_72)
+        bangla_Number_Sound.add(R.raw.bangla_73)
+        bangla_Number_Sound.add(R.raw.bangla_74)
+        bangla_Number_Sound.add(R.raw.bangla_75)
+        bangla_Number_Sound.add(R.raw.bangla_76)
+        bangla_Number_Sound.add(R.raw.bangla_77)
+        bangla_Number_Sound.add(R.raw.bangla_78)
+        bangla_Number_Sound.add(R.raw.bangla_79)
+        bangla_Number_Sound.add(R.raw.bangla_80)
+        bangla_Number_Sound.add(R.raw.bangla_81)
+        bangla_Number_Sound.add(R.raw.bangla_82)
+        bangla_Number_Sound.add(R.raw.bangla_83)
+        bangla_Number_Sound.add(R.raw.bangla_84)
+        bangla_Number_Sound.add(R.raw.bangla_85)
+        bangla_Number_Sound.add(R.raw.bangla_86)
+        bangla_Number_Sound.add(R.raw.bangla_87)
+        bangla_Number_Sound.add(R.raw.bangla_88)
+        bangla_Number_Sound.add(R.raw.bangla_89)
+        bangla_Number_Sound.add(R.raw.bangla_90)
+        bangla_Number_Sound.add(R.raw.bangla_91)
+        bangla_Number_Sound.add(R.raw.bangla_92)
+        bangla_Number_Sound.add(R.raw.bangla_93)
+        bangla_Number_Sound.add(R.raw.bangla_94)
+        bangla_Number_Sound.add(R.raw.bangla_95)
+        bangla_Number_Sound.add(R.raw.bangla_96)
+        bangla_Number_Sound.add(R.raw.bangla_97)
+        bangla_Number_Sound.add(R.raw.bangla_98)
+        bangla_Number_Sound.add(R.raw.bangla_99)
+        bangla_Number_Sound.add(R.raw.bangla_100)
 
-        bangla_number_recyclerView_ID.addOnItemTouchListener(RecyclerItemClickListenr(this,bangla_number_recyclerView_ID,object : RecyclerItemClickListenr.OnItemClickListener{
-            override fun onItemClick(view: View, position: Int) {
+        mediaPlayer.stop()
+        mediaPlayer.release()
+        mediaPlayer= MediaPlayer.create(this@Bangla_Number_Activity,bangla_Number_Sound[0])
+        mediaPlayer.start()
 
 
+        var gridLayoutManager = GridLayoutManager(this, 2)
+        bangla_number_recyclerView_ID.layoutManager = gridLayoutManager
 
-                YoYo.with(Techniques.BounceInLeft)
-                    .duration(500)
-                    .repeat(0)
-                    .playOn(view.findViewById(R.id.linearLayout_Bangla_number_Item))
+        var banglaNumberAdapter = Bangla_Number_Adapter(bangla_Number_list, bangla_Number_kothay_list)
+        bangla_number_recyclerView_ID.adapter = banglaNumberAdapter
 
-            }
-
-            override fun onItemLongClick(view: View?, position: Int) {
-
-
-                YoYo.with(Techniques.BounceInLeft)
-                    .duration(500)
-                    .repeat(0)
-                    .playOn(view!!.findViewById(R.id.linearLayout_Bangla_number_Item))
-            }
-
-        }))
+        bangla_number_recyclerView_ID.addOnItemTouchListener(
+            RecyclerItemClickListenr(
+                this,
+                bangla_number_recyclerView_ID,
+                object : RecyclerItemClickListenr.OnItemClickListener {
+                    override fun onItemClick(view: View, position: Int) {
 
 
+                        YoYo.with(Techniques.BounceInLeft)
+                            .duration(500)
+                            .repeat(0)
+                            .playOn(view.findViewById(R.id.linearLayout_Bangla_number_Item))
 
 
+                        mediaPlayer.stop()
+                        mediaPlayer.release()
+                        mediaPlayer= MediaPlayer.create(this@Bangla_Number_Activity,bangla_Number_Sound[position])
+                        mediaPlayer.start()
+
+                    }
+
+                    override fun onItemLongClick(view: View?, position: Int) {
+
+
+                        YoYo.with(Techniques.BounceInLeft)
+                            .duration(500)
+                            .repeat(0)
+                            .playOn(view!!.findViewById(R.id.linearLayout_Bangla_number_Item))
+
+                        mediaPlayer.stop()
+                        mediaPlayer.release()
+                        mediaPlayer= MediaPlayer.create(this@Bangla_Number_Activity,bangla_Number_Sound[position])
+                        mediaPlayer.start()
+                    }
+
+                })
+        )
+
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.stop()
+        mediaPlayer.release()
     }
 }
