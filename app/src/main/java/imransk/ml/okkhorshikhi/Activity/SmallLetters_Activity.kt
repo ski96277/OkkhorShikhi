@@ -11,6 +11,7 @@ import imransk.ml.okkhorshikhi.AdapterClass.Small_Letter_Adapter
 import imransk.ml.okkhorshikhi.R
 import imransk.ml.okkhorshikhi.RecyclerView_click.RecyclerItemClickListenr
 import kotlinx.android.synthetic.main.activity_small_letters.*
+import kotlinx.android.synthetic.main.app_bar.*
 import kotlin.collections.ArrayList
 
 class SmallLetters_Activity : AppCompatActivity() {
@@ -25,6 +26,10 @@ class SmallLetters_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_small_letters)
+
+
+        setSupportActionBar(toolbar_id)
+        supportActionBar!!.title = "a b c"
 
         small_Litter_List.add("a")
         small_Litter_List.add("b")
@@ -315,4 +320,26 @@ class SmallLetters_Activity : AppCompatActivity() {
         mediaPlayer.stop()
         mediaPlayer.release()
     }
+    /*
+    //hide bottom and notification bar START
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus){ hideSystemUI()}
+    }
+
+    private fun hideSystemUI() {
+
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
+                // Set the content to appear under the system bars so that the
+                // content doesn't resize when the system bars hide and show.
+                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                // Hide the nav bar and status bar
+                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN)
+    }
+//hide bottom and notification bar END
+
+*/
 }

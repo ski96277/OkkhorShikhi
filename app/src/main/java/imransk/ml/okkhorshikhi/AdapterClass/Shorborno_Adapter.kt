@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import imransk.ml.okkhorshikhi.Activity.Shorborno_Activity
 import imransk.ml.okkhorshikhi.R
-import kotlinx.android.synthetic.main.shororno_item_view.view.*
+import kotlinx.android.synthetic.main.shorborno_item_view.view.*
 
 class Shorborno_Adapter(val contex: Shorborno_Activity, val shorbborno_text: ArrayList<String>) :
     RecyclerView.Adapter<Shorborno_Adapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.shororno_item_view, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.shorborno_item_view, parent, false)
 
         return ViewHolder(view)
     }

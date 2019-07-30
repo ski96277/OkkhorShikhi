@@ -13,6 +13,7 @@ import imransk.ml.okkhorshikhi.RecyclerView_click.RecyclerItemClickListenr
 import imransk.ml.okkhorshikhi.AdapterClass.Shorborno_Adapter
 import kotlinx.android.synthetic.main.activity_banjon_borno.*
 import kotlinx.android.synthetic.main.activity_shorborno.*
+import kotlinx.android.synthetic.main.app_bar.*
 
 class Shorborno_Activity : AppCompatActivity() {
 
@@ -26,6 +27,9 @@ class Shorborno_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shorborno)
+
+        setSupportActionBar(toolbar_id)
+        supportActionBar!!.title = "স্বরবর্ণ "
 
         shorbborno_okkhor.add("অ")
         shorbborno_okkhor.add("আ")
@@ -245,4 +249,26 @@ class Shorborno_Activity : AppCompatActivity() {
         mPlayer2.stop()
         mPlayer2.release()
     }
+/*
+    //hide bottom and notification bar START
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus){ hideSystemUI()}
+    }
+
+    private fun hideSystemUI() {
+
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
+                // Set the content to appear under the system bars so that the
+                // content doesn't resize when the system bars hide and show.
+                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                // Hide the nav bar and status bar
+                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN)
+    }
+//hide bottom and notification bar END
+
+*/
 }

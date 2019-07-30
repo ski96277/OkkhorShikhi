@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.CapitalLetters_Activity"
+
+        android:background="#CDDC39">
+    <include
+            layout="@layout/app_bar"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content" android:layout_width="0dp" app:layout_constraintHorizontal_bias="0.0"
+
+            android:visibility="gone"/>
+
+    <TextView
+            android:text="AA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/capital_text_show_TV_ID"
+            android:fontFamily="@font/kelsonsansbg_old"
+            android:textSize="46sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="56dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_details_capital_letters"
+            android:layout_marginEnd="60dp"/>
+    <ImageView
+            android:layout_width="260dp"
+            android:layout_height="183dp"
+            app:srcCompat="@drawable/a_image"
+            android:id="@+id/imageView_details_capital_letters"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="19dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintVertical_bias="0.0" android:layout_marginStart="152dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/capital_letter_image_nameTV_ID"
+            android:textSize="30sp"
+
+            android:textColor="#FA0303" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="64dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView_details_capital_letters"
+            android:layout_marginStart="24dp"/>
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="573dp"
+            android:layout_height="99dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/linearLayout4">
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/capital_letters_recycler_ID"
+                android:scrollbars="horizontal"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

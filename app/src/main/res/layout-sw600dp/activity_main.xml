@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.MainActivity"
+        android:background="#CDDC39">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <include
+            layout="@layout/app_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:id="@+id/include"/>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            android:id="@+id/cardView"
+            android:backgroundTint="#9AA52A"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView3" app:layout_constraintTop_toBottomOf="@+id/include"
+            android:layout_marginTop="20dp">
+        <ImageButton
+
+                android:backgroundTint="#9AA52A"
+                android:src="@drawable/shorborno_1"
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:id="@+id/shorborno_btn_ID"
+                android:scaleType="fitXY"
+                android:layout_margin="20dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            android:id="@+id/cardView2"
+            android:backgroundTint="#9AA52A"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView4" app:layout_constraintTop_toBottomOf="@+id/include"
+            android:layout_marginTop="20dp">
+        <ImageButton
+                android:backgroundTint="#9AA52A"
+                android:src="@drawable/banjon_borno_1"
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:id="@+id/banjon_borno_btn_ID"
+                android:scaleType="fitXY"
+                android:layout_margin="20dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            android:id="@+id/cardView3"
+            android:backgroundTint="#9AA52A"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/cardView">
+        <ImageButton
+                android:backgroundTint="#9AA52A"
+                android:src="@drawable/capital_letter_1"
+
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:id="@+id/capital_letters_btn_ID"
+                android:scaleType="fitXY"
+                android:layout_margin="20dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            android:id="@+id/cardView4"
+            android:backgroundTint="#9AA52A"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+        <ImageButton
+                android:backgroundTint="#9AA52A"
+                android:src="@drawable/small_letter_1"
+
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:id="@+id/small_letters_btn_ID"
+                android:scaleType="fitXY"
+                android:layout_margin="20dp"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            android:id="@+id/cardView5"
+
+            android:backgroundTint="#9AA52A"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/cardView3">
+        <ImageButton
+                android:backgroundTint="#9AA52A"
+                android:src="@drawable/bangla_number_1"
+
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:id="@+id/number_bangla_btn_ID"
+                android:scaleType="fitXY"
+                android:layout_margin="20dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            android:id="@+id/cardView6"
+
+            android:backgroundTint="#9AA52A"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/cardView4">
+        <ImageButton
+                android:backgroundTint="#9AA52A"
+                android:src="@drawable/english_onkho_1"
+
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:id="@+id/number_english_btn_ID"
+                android:scaleType="fitXY"
+                android:layout_margin="20dp"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            android:id="@+id/cardVie7"
+            android:backgroundTint="#9AA52A"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="97dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="98dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp" app:layout_constraintTop_toBottomOf="@+id/cardView5">
+        <ImageButton
+                android:backgroundTint="#9AA52A"
+                android:src="@drawable/arbi_borno_1"
+
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:id="@+id/arbi_btn_ID"
+                android:scaleType="fitXY"
+                android:layout_margin="20dp"/>
+    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

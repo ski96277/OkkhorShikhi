@@ -1,9 +1,15 @@
 package imransk.ml.okkhorshikhi.Activity
 
+import android.annotation.SuppressLint
 import android.media.MediaPlayer
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
@@ -11,17 +17,20 @@ import imransk.ml.okkhorshikhi.AdapterClass.Arbi_Borno_Adapter
 import imransk.ml.okkhorshikhi.R
 import imransk.ml.okkhorshikhi.RecyclerView_click.RecyclerItemClickListenr
 import kotlinx.android.synthetic.main.activity_arbi__borno.*
+import kotlinx.android.synthetic.main.app_bar.*
 
 class Arbi_Borno_Activity : AppCompatActivity() {
 
-    var arbi_borno_List=ArrayList<String>()
+    var arbi_borno_List = ArrayList<String>()
     val arbi_Letters_Sound_list = ArrayList<Int>()
 
-var mediaPlayer=MediaPlayer()
+    var mediaPlayer = MediaPlayer()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_arbi__borno)
+        setSupportActionBar(toolbar_id)
+        supportActionBar!!.title = "আরবি বর্ণ"
 
         arbi_borno_List.add("ا")
         arbi_borno_List.add("ب")
@@ -115,61 +124,66 @@ var mediaPlayer=MediaPlayer()
         arbi_borno_List.add(R.drawable.arbi_borno_29)
         arbi_borno_List.add(R.drawable.arbi_borno_30)*/
 
-        var layoutManager=LinearLayoutManager(this)
-        layoutManager.orientation=LinearLayoutManager.HORIZONTAL
-        arbi_okkhor_recycler_ID.layoutManager=layoutManager
+        var layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.HORIZONTAL
+        arbi_okkhor_recycler_ID.layoutManager = layoutManager
 
-        var arbiBornoAdapter =Arbi_Borno_Adapter(arbi_borno_List)
-        arbi_okkhor_recycler_ID.adapter=arbiBornoAdapter
+        var arbiBornoAdapter = Arbi_Borno_Adapter(arbi_borno_List)
+        arbi_okkhor_recycler_ID.adapter = arbiBornoAdapter
 
         textview_details_arbi_borno.text = arbi_borno_List[0]
 
         mediaPlayer.stop()
         mediaPlayer.release()
-        mediaPlayer= MediaPlayer.create(this@Arbi_Borno_Activity,arbi_Letters_Sound_list[0])
+        mediaPlayer = MediaPlayer.create(this@Arbi_Borno_Activity, arbi_Letters_Sound_list[0])
         mediaPlayer.start()
 
 
-        arbi_okkhor_recycler_ID.addOnItemTouchListener(RecyclerItemClickListenr(this,arbi_okkhor_recycler_ID,object : RecyclerItemClickListenr.OnItemClickListener{
-            override fun onItemClick(view: View, position: Int) {
+        arbi_okkhor_recycler_ID.addOnItemTouchListener(
+            RecyclerItemClickListenr(
+                this,
+                arbi_okkhor_recycler_ID,
+                object : RecyclerItemClickListenr.OnItemClickListener {
+                    override fun onItemClick(view: View, position: Int) {
 
 
-                mediaPlayer.stop()
-                mediaPlayer.release()
-                mediaPlayer= MediaPlayer.create(this@Arbi_Borno_Activity,arbi_Letters_Sound_list[position])
-                mediaPlayer.start()
+                        mediaPlayer.stop()
+                        mediaPlayer.release()
+                        mediaPlayer = MediaPlayer.create(this@Arbi_Borno_Activity, arbi_Letters_Sound_list[position])
+                        mediaPlayer.start()
 
-                textview_details_arbi_borno.text = arbi_borno_List[position]
+                        textview_details_arbi_borno.text = arbi_borno_List[position]
 
 
 //animation for recycler item
-                YoYo.with(Techniques.BounceInLeft)
-                    .duration(500)
-                    .repeat(0)
-                    .playOn(view.findViewById(R.id.item_text_arbi_letter))
+                        YoYo.with(Techniques.BounceInLeft)
+                            .duration(500)
+                            .repeat(0)
+                            .playOn(view.findViewById(R.id.item_text_arbi_letter))
 
-            }
+                    }
 
-            override fun onItemLongClick(view: View?, position: Int) {
+                    override fun onItemLongClick(view: View?, position: Int) {
 
-                mediaPlayer.stop()
-                mediaPlayer.release()
-                mediaPlayer= MediaPlayer.create(this@Arbi_Borno_Activity,arbi_Letters_Sound_list[position])
-                mediaPlayer.start()
+                        mediaPlayer.stop()
+                        mediaPlayer.release()
+                        mediaPlayer = MediaPlayer.create(this@Arbi_Borno_Activity, arbi_Letters_Sound_list[position])
+                        mediaPlayer.start()
 
-                textview_details_arbi_borno.text = arbi_borno_List[position]
+                        textview_details_arbi_borno.text = arbi_borno_List[position]
 
 
 //animation for item
-                YoYo.with(Techniques.BounceInLeft)
-                    .duration(500)
-                    .repeat(0)
-                    .playOn(view!!.findViewById(R.id.item_text_arbi_letter))
+                        YoYo.with(Techniques.BounceInLeft)
+                            .duration(500)
+                            .repeat(0)
+                            .playOn(view!!.findViewById(R.id.item_text_arbi_letter))
 
 
-            }
+                    }
 
-        }))
+                })
+        )
 
     }
 
@@ -178,4 +192,32 @@ var mediaPlayer=MediaPlayer()
         mediaPlayer.stop()
         mediaPlayer.release()
     }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return true
+    }
+
+    /*
+//    //hide bottom and notification bar START
+//    override fun onWindowFocusChanged(hasFocus: Boolean) {
+//        super.onWindowFocusChanged(hasFocus)
+//        if (hasFocus){ hideSystemUI()}
+//    }
+//
+//    private fun hideSystemUI() {
+//
+//        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
+//                // Set the content to appear under the system bars so that the
+//                // content doesn't resize when the system bars hide and show.
+//                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+//                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+//                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                // Hide the nav bar and status bar
+//                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+//                or View.SYSTEM_UI_FLAG_FULLSCREEN)
+//    }
+////hide bottom and notification bar END*/
+
 }

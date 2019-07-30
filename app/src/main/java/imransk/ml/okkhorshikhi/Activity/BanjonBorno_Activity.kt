@@ -12,6 +12,7 @@ import imransk.ml.okkhorshikhi.R
 import imransk.ml.okkhorshikhi.RecyclerView_click.RecyclerItemClickListenr
 import kotlinx.android.synthetic.main.activity_banjon_borno.*
 import kotlinx.android.synthetic.main.activity_shorborno.*
+import kotlinx.android.synthetic.main.app_bar.*
 import kotlin.collections.ArrayList
 
 class BanjonBorno_Activity : AppCompatActivity() {
@@ -27,6 +28,10 @@ class BanjonBorno_Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_banjon_borno)
+
+
+        setSupportActionBar(toolbar_id)
+        supportActionBar!!.title = "ব্যঞ্জনবর্ণ"
 
         banjon_borno_List.add("ক")
         banjon_borno_List.add("খ")
@@ -93,7 +98,7 @@ class BanjonBorno_Activity : AppCompatActivity() {
         banjonborno_example_text.add("পাখি")
         banjonborno_example_text.add("ফুল")
         banjonborno_example_text.add("বই")
-        banjonborno_example_text.add("ভালুক")
+        banjonborno_example_text.add("ভাল্লুক")
         banjonborno_example_text.add("ময়ূর")
         banjonborno_example_text.add("যব")
         banjonborno_example_text.add("রাজহাঁস")
@@ -276,9 +281,12 @@ class BanjonBorno_Activity : AppCompatActivity() {
                                 .repeat(0)
                                 .playOn(view.findViewById(R.id.item_text_banjon_borno))
 
-                            mPlayer2.stop()
-                            mPlayer2.release()
+                           /* if (mPlayer2.isPlaying){
 
+                                mPlayer2.stop()
+                                mPlayer2.release()
+
+                            }*/
                             banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
                             imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
                             bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
@@ -330,6 +338,48 @@ class BanjonBorno_Activity : AppCompatActivity() {
 
                     override fun onItemLongClick(view: View?, position: Int) {
 
+
+
+                        if (position%2==0){
+
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(banjonorno_text_show_TV_ID)
+
+
+                            YoYo.with(Techniques.DropOut)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details_banjon_borno)
+
+
+                            YoYo.with(Techniques.RollIn)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(bangonorno_example_details_TV_ID)
+
+                        }else{
+
+
+                            YoYo.with(Techniques.BounceInLeft)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(banjonorno_text_show_TV_ID)
+
+
+                            YoYo.with(Techniques.ZoomInUp)
+                                .duration(700)
+                                .repeat(0)
+                                .playOn(imageView_details_banjon_borno)
+
+
+                            YoYo.with(Techniques.BounceInRight)
+                                .duration(1000)
+                                .repeat(0)
+                                .playOn(bangonorno_example_details_TV_ID)
+                        }
+
                         if (position != 39) {
 
                             //animation of item click
@@ -360,52 +410,18 @@ class BanjonBorno_Activity : AppCompatActivity() {
 
                             banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
 
-                            mPlayer2.stop()
-                            mPlayer2.release()
+                           /* if (mPlayer2.isPlaying){
+
+                                mPlayer2.stop()
+                                mPlayer2.release()
+                                mPlayer2 = MediaPlayer()
+//                                mPlayer2.reset()
+                            }*/
                             imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
                             bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
 
                         }
 
-                        if (position%2==0){
-
-                            YoYo.with(Techniques.ZoomInUp)
-                                .duration(1000)
-                                .repeat(0)
-                                .playOn(banjonorno_text_show_TV_ID)
-
-
-                            YoYo.with(Techniques.DropOut)
-                                .duration(700)
-                                .repeat(0)
-                                .playOn(imageView_details_banjon_borno)
-
-
-                            YoYo.with(Techniques.RollIn)
-                                .duration(1000)
-                                .repeat(0)
-                                .playOn(bangonorno_example_details_TV_ID)
-
-                        }else{
-
-
-                            YoYo.with(Techniques.BounceInLeft)
-                                .duration(1000)
-                                .repeat(0)
-                                .playOn(shorborno_view_TV_ID)
-
-
-                            YoYo.with(Techniques.ZoomInUp)
-                                .duration(700)
-                                .repeat(0)
-                                .playOn(imageView_details)
-
-
-                            YoYo.with(Techniques.BounceInRight)
-                                .duration(1000)
-                                .repeat(0)
-                                .playOn(shorborno_exampale_name_TV_ID)
-                        }
 
                     }
 
@@ -422,4 +438,25 @@ class BanjonBorno_Activity : AppCompatActivity() {
         mPlayer2.stop()
         mPlayer2.release()
     }
+/*
+    //hide bottom and notification bar START
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus){ hideSystemUI()}
+    }
+    private fun hideSystemUI() {
+
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE
+                // Set the content to appear under the system bars so that the
+                // content doesn't resize when the system bars hide and show.
+                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                // Hide the nav bar and status bar
+                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN)
+    }
+//hide bottom and notification bar END
+
+    */
 }
