@@ -31,8 +31,8 @@
             android:layout_marginBottom="21dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             android:layout_marginTop="11dp" app:layout_constraintTop_toBottomOf="@+id/include12"/>
     <ImageView
-            android:layout_width="295dp"
-            android:layout_height="146dp"
+            android:layout_width="200dp"
+            android:layout_height="133dp"
             app:srcCompat="@drawable/home_page_bg"
             android:id="@+id/imageView_details_banjon_borno"
             android:scaleType="fitXY"
@@ -43,8 +43,8 @@
             app:layout_constraintEnd_toStartOf="@+id/banjonorno_text_show_TV_ID" android:layout_marginEnd="6dp"/>
     <TextView
 
-            android:layout_width="162dp"
-            android:layout_height="95dp"
+            android:layout_width="136dp"
+            android:layout_height="96dp"
             android:id="@+id/bangonorno_example_details_TV_ID"
             android:textColor="#F30A0A"
             android:textSize="30sp"
@@ -58,12 +58,11 @@
             android:layout_marginBottom="21dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout2"/>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="583dp"
-            android:layout_height="120dp"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             android:id="@+id/linearLayout2">
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"

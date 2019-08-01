@@ -28,7 +28,7 @@
             android:textSize="120sp"
             android:gravity="center"
             app:layout_constraintHorizontal_bias="0.502"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@+id/include10"/>
     <ImageView
             android:layout_width="544dp"
@@ -45,27 +45,26 @@
 
     <TextView
             android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="557dp"
+            android:layout_height="98dp"
             android:id="@+id/capital_letter_image_nameTV_ID"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="176dp"
+            android:layout_marginEnd="6dp"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="177dp"
+            android:layout_marginStart="6dp"
             android:textSize="80sp"
 
             android:textColor="#FA0303" android:layout_marginTop="5dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView_details_capital_letters"/>
+            app:layout_constraintTop_toBottomOf="@+id/imageView_details_capital_letters" android:gravity="center"/>
 
 
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="219dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             android:id="@+id/linearLayout4">
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"

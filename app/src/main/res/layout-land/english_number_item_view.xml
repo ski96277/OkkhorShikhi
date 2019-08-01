@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="80sp"
+                android:textSize="50sp"
                 android:textColor="#F5D80719"
                 android:fontFamily="@font/kelsonsansbg_old"
                 android:id="@+id/textView_ID_English_number"/>

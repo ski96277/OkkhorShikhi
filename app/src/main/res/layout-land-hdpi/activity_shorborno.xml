@@ -51,12 +51,11 @@
             android:layout_marginStart="1dp" android:layout_marginTop="60dp" app:layout_constraintTop_toTopOf="parent"/>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="577dp"
+            android:layout_width="0dp"
             android:layout_height="101dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             android:id="@+id/linearLayout">
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"

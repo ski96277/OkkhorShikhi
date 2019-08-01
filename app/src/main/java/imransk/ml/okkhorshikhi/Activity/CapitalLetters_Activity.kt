@@ -90,7 +90,7 @@ class CapitalLetters_Activity : AppCompatActivity() {
         capitalletters_image_text_details.add("Van")
         capitalletters_image_text_details.add("Watch")
         capitalletters_image_text_details.add("Box")
-        capitalletters_image_text_details.add("yyy")
+        capitalletters_image_text_details.add("Yot")
         capitalletters_image_text_details.add("Zebra")
 
         capitalLetters_Sound_list.add(R.raw.a)

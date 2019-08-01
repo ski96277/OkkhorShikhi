@@ -6,15 +6,15 @@
 
 
     <TextView
-            android:layout_width="150dp"
+            android:layout_width="80dp"
             android:id="@+id/item_text_arbi_letter"
             android:scaleType="fitXY"
-            android:layout_height="150dp"
+            android:layout_height="80dp"
             android:text="ظ"
             android:textColor="#FC03AA"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:textSize="90sp"
+            android:textSize="50sp"
             android:fontFamily="@font/nikosh"
             android:background="@drawable/bg_image"
     />

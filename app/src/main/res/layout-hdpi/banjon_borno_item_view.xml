@@ -11,7 +11,7 @@
             android:layout_height="120dp"
             android:text="ক"
             android:fontFamily="@font/turagmj_bangla"
-            android:textSize="100dp"
+            android:textSize="90sp"
             android:textColor="#FA0606"
             android:gravity="center"
             android:background="@drawable/bg_image"

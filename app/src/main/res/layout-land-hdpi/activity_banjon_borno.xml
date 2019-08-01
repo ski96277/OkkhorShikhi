@@ -58,7 +58,7 @@
             app:layout_constraintStart_toEndOf="@+id/imageView_details_banjon_borno" android:layout_marginStart="11dp"/>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="572dp"
+            android:layout_width="0dp"
             android:layout_height="91dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

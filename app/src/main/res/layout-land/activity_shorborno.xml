@@ -9,60 +9,51 @@
         android:background="#CDDC39">
     <include
             layout="@layout/app_bar"
+            android:visibility="gone"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_height="wrap_content" android:layout_width="0dp" app:layout_constraintHorizontal_bias="0.0"
-    />
+            android:id="@+id/include35"/>
 
     <TextView
             android:layout_width="137dp"
             android:layout_height="90dp"
             android:id="@+id/shorborno_view_TV_ID"
-            android:gravity="bottom|center"
-            android:textSize="60sp"
-            android:textColor="#000"
-            android:fontFamily="@font/turagmj_bangla"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="137dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="138dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView_details" android:text="ই"/>
-    <ImageView
-            android:layout_width="368dp"
-            android:layout_height="185dp"
-            app:srcCompat="@drawable/home_page_bg"
-            android:id="@+id/imageView_details"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            android:scaleType="fitXY"
-            android:layout_marginBottom="36dp"
-            app:layout_constraintBottom_toTopOf="@+id/shorborno_exampale_name_TV_ID"/>
-    <TextView
-            android:layout_width="245dp"
-            android:layout_height="41dp"
-            android:id="@+id/shorborno_exampale_name_TV_ID"
             android:gravity="center"
             android:textSize="30sp"
+            android:textColor="#000"
+            android:fontFamily="@font/turagmj_bangla"
+            android:text="ই"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/include35" app:layout_constraintEnd_toEndOf="parent"
+    />
+    <ImageView
+            android:layout_width="190dp"
+            android:layout_height="143dp"
+            app:srcCompat="@drawable/home_page_bg"
+            android:id="@+id/imageView_details"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toBottomOf="@+id/include35"
+            app:layout_constraintEnd_toStartOf="@+id/shorborno_view_TV_ID" android:layout_marginEnd="10dp"
+    />
+    <TextView
+            android:layout_width="144dp"
+            android:layout_height="54dp"
+            android:id="@+id/shorborno_exampale_name_TV_ID"
+            android:gravity="center"
+            android:textSize="20sp"
             android:textColor="#F30606"
             android:fontFamily="@font/turagmj_bangla"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="138dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="138dp"
-            app:layout_constraintHorizontal_bias="0.496"
-            android:layout_marginBottom="2dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout" android:text="ঔ"
-    />
+            android:text="ঔ"
+            android:layout_marginTop="39dp"
+            app:layout_constraintTop_toBottomOf="@+id/include35" app:layout_constraintStart_toStartOf="parent"/>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             android:id="@+id/linearLayout">
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"

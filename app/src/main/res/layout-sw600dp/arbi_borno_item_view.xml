@@ -7,8 +7,8 @@
 
     <TextView
             android:layout_width="249dp"
-            android:layout_height="235dp"
-            android:textSize="190sp"
+            android:layout_height="215dp"
+            android:textSize="170sp"
             android:id="@+id/item_text_arbi_letter"
             android:scaleType="fitXY"
             android:text="ظ"

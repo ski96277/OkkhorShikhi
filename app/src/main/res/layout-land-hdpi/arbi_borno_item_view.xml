@@ -9,7 +9,7 @@
             android:layout_width="130dp"
             android:id="@+id/item_text_arbi_letter"
             android:scaleType="fitXY"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:text="ظ"
             android:textColor="#FC03AA"
             android:layout_gravity="center_horizontal"

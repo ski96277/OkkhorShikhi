@@ -82,7 +82,7 @@ class SmallLetters_Activity : AppCompatActivity() {
         smallLetters_details_text.add("Van")
         smallLetters_details_text.add("Watch")
         smallLetters_details_text.add("Box")
-        smallLetters_details_text.add("yyy")
+        smallLetters_details_text.add("Yot")
         smallLetters_details_text.add("Zebra")
 
         smallLetters_Images_details_list.add(R.drawable.a_image)

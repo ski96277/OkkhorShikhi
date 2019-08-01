@@ -21,7 +21,7 @@
             android:layout_width="396dp"
             android:layout_height="135dp"
             android:id="@+id/small_letter_text_view_ID"
-            android:textColor="#000A09" android:layout_marginTop="9dp"
+            android:textColor="#000A09" android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@+id/include18" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="104dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="104dp"/>
@@ -49,11 +49,11 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="177dp"
             android:textSize="90sp"
-            android:textColor="#FA0606" android:layout_marginTop="16dp"
+            android:textColor="#FA0606" android:layout_marginTop="6dp"
             app:layout_constraintTop_toBottomOf="@+id/imageView_details_small_letters"/>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="237dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

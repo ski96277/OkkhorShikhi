@@ -50,7 +50,7 @@
             app:layout_constraintTop_toBottomOf="@+id/include15"/>
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="640dp"
+            android:layout_width="0dp"
             android:layout_height="101dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

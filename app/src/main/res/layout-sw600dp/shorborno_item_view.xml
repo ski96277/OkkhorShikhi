@@ -8,7 +8,7 @@
             android:id="@+id/item_text_shorborno"
             android:layout_width="249dp"
             android:layout_height="235dp"
-            android:textSize="190sp"
+            android:textSize="170sp"
             android:text="অ"
             android:background="@drawable/bg_image"
             android:gravity="center"

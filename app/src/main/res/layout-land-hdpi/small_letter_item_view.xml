@@ -8,7 +8,7 @@
             android:layout_width="130dp"
             android:id="@+id/item_text_small_letter"
             android:scaleType="fitXY"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:textSize="70sp"
             android:text="a"
             android:textColor="#FA0707"

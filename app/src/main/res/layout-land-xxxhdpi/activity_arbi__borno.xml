@@ -34,7 +34,7 @@
     <LinearLayout
             android:id="@+id/recycler_layout_ID"
             android:orientation="vertical"
-            android:layout_width="624dp"
+            android:layout_width="0dp"
             android:layout_height="139dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

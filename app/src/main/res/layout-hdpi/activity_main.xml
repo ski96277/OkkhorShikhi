@@ -101,7 +101,7 @@
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
             android:layout_width="135dp"
-            android:layout_height="130dp"
+            android:layout_height="155dp"
             app:cardElevation="10dp"
             android:id="@+id/cardView5"
 
@@ -111,16 +111,16 @@
         <ImageButton
                 android:backgroundTint="#9AA52A"
                 android:src="@drawable/bangla_number_1"
-                android:layout_width="93dp"
-                android:layout_height="106dp"
+                android:layout_width="103dp"
+                android:layout_height="116dp"
                 android:id="@+id/number_bangla_btn_ID"
                 android:scaleType="fitXY"
                 android:layout_margin="20dp"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-            android:layout_width="124dp"
-            android:layout_height="127dp"
+            android:layout_width="135dp"
+            android:layout_height="155dp"
             app:cardElevation="10dp"
             android:id="@+id/cardView6"
 
@@ -130,8 +130,8 @@
         <ImageButton
                 android:backgroundTint="#9AA52A"
                 android:src="@drawable/english_onkho_1"
-                android:layout_width="95dp"
-                android:layout_height="97dp"
+                android:layout_width="103dp"
+                android:layout_height="116dp"
                 android:id="@+id/number_english_btn_ID"
                 android:scaleType="fitXY"
                 android:layout_margin="20dp"/>

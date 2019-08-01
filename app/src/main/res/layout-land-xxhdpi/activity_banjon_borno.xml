@@ -37,7 +37,6 @@
             android:id="@+id/imageView_details_banjon_borno"
             android:scaleType="fitXY"
             app:layout_constraintTop_toBottomOf="@+id/include13"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintStart_toEndOf="@+id/bangonorno_example_details_TV_ID"
             android:layout_marginStart="11dp" app:layout_constraintEnd_toStartOf="@+id/banjonorno_text_show_TV_ID"
             android:layout_marginEnd="17dp"/>
@@ -55,12 +54,11 @@
     />
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="643dp"
+            android:layout_width="0dp"
             android:layout_height="107dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             android:id="@+id/linearLayout2">
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"

@@ -17,8 +17,8 @@
 
     <TextView
             android:text="AA"
-            android:layout_width="211dp"
-            android:layout_height="123dp"
+            android:layout_width="269dp"
+            android:layout_height="126dp"
             android:id="@+id/capital_text_show_TV_ID"
             android:fontFamily="@font/kelsonsansbg_old"
             android:textSize="70sp"
@@ -27,15 +27,15 @@
             app:layout_constraintTop_toBottomOf="@+id/include10" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"/>
     <ImageView
-            android:layout_width="426dp"
-            android:layout_height="324dp"
+            android:layout_width="447dp"
+            android:layout_height="303dp"
             app:srcCompat="@drawable/a_image"
             android:id="@+id/imageView_details_capital_letters"
             android:scaleType="fitXY"
             app:layout_constraintTop_toBottomOf="@+id/include10"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-            app:layout_constraintStart_toEndOf="@+id/capital_text_show_TV_ID" android:layout_marginStart="52dp"
-            app:layout_constraintEnd_toStartOf="@+id/capital_letter_image_nameTV_ID" android:layout_marginEnd="22dp"/>
+            app:layout_constraintEnd_toStartOf="@+id/capital_letter_image_nameTV_ID" android:layout_marginEnd="22dp"
+            app:layout_constraintStart_toEndOf="@+id/capital_text_show_TV_ID" android:layout_marginStart="68dp"
+            android:layout_marginTop="4dp" app:layout_constraintHorizontal_bias="0.898"/>
 
     <TextView
             android:text="TextView"
@@ -57,7 +57,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             android:id="@+id/linearLayout4">
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"

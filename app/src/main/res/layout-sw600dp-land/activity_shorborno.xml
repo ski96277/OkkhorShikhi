@@ -15,8 +15,8 @@
             android:id="@+id/include17"/>
 
     <TextView
-            android:layout_width="211dp"
-            android:layout_height="74dp"
+            android:layout_width="366dp"
+            android:layout_height="157dp"
             android:id="@+id/shorborno_view_TV_ID"
             android:gravity="center"
             android:textSize="70sp"
@@ -37,8 +37,8 @@
             app:layout_constraintStart_toEndOf="@+id/shorborno_view_TV_ID" android:layout_marginStart="15dp"
             app:layout_constraintEnd_toStartOf="@+id/shorborno_exampale_name_TV_ID" android:layout_marginEnd="7dp"/>
     <TextView
-            android:layout_width="303dp"
-            android:layout_height="113dp"
+            android:layout_width="363dp"
+            android:layout_height="184dp"
             android:id="@+id/shorborno_exampale_name_TV_ID"
             android:gravity="center"
             android:textSize="70sp"
@@ -46,7 +46,7 @@
             android:fontFamily="@font/turagmj_bangla"
             android:text="ঔ"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="16dp" android:layout_marginTop="102dp"
+            android:layout_marginEnd="16dp" android:layout_marginTop="118dp"
             app:layout_constraintTop_toBottomOf="@+id/include17"/>
     <LinearLayout
             android:orientation="vertical"
@@ -55,7 +55,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             android:id="@+id/linearLayout">
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"

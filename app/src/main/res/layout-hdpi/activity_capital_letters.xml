@@ -18,8 +18,8 @@
 
     <TextView
             android:text="AA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="133dp"
+            android:layout_height="63dp"
             android:id="@+id/capital_text_show_TV_ID"
             android:layout_marginEnd="177dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,9 +27,9 @@
             android:layout_marginStart="176dp"
             android:fontFamily="@font/kelsonsansbg_old"
             android:textSize="46sp"
-            app:layout_constraintHorizontal_bias="0.428" android:layout_marginBottom="3dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView_details_capital_letters"
-            app:layout_constraintTop_toBottomOf="@+id/include11"/>
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintTop_toBottomOf="@+id/include11" android:gravity="center"
+    />
     <ImageView
             android:layout_width="273dp"
             android:layout_height="208dp"
@@ -40,14 +40,13 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
             android:scaleType="fitXY"
-            android:layout_marginBottom="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/capital_letter_image_nameTV_ID"
-            app:layout_constraintHorizontal_bias="0.495"/>
+            app:layout_constraintHorizontal_bias="0.741" android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/capital_text_show_TV_ID"/>
 
     <TextView
             android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="243dp"
+            android:layout_height="49dp"
             android:id="@+id/capital_letter_image_nameTV_ID"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="176dp"
@@ -55,20 +54,17 @@
             android:layout_marginStart="177dp"
             android:textSize="30sp"
 
-            app:layout_constraintHorizontal_bias="0.503"
-            android:layout_marginBottom="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-            android:textColor="#FA0303"/>
+            android:textColor="#FA0303" android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_details_capital_letters" android:gravity="center"/>
 
 
     <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_width="0dp"
+            android:layout_height="133dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
             android:id="@+id/linearLayout4">
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
