@@ -4,13 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AlertDialog
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
-import imransk.ml.okkhorshikhi.R
 import kotlinx.android.synthetic.main.activity_main.*
-import android.view.Menu
 import kotlinx.android.synthetic.main.app_bar.*
+import android.app.Dialog
+import android.view.Window
+import android.widget.Button
+import imransk.ml.okkhorshikhi.R
+import android.net.Uri
+import android.util.Log
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -30,27 +33,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 //animation for item
         YoYo.with(Techniques.SlideInRight)
-            .duration(2000)
+            .duration(1000)
             .repeat(0)
             .playOn(shorborno_btn_ID)
 //animation for item
         YoYo.with(Techniques.SlideInRight)
-            .duration(2000)
+            .duration(1000)
             .repeat(0)
             .playOn(capital_letters_btn_ID)
 //animation for item
         YoYo.with(Techniques.SlideInRight)
-            .duration(2000)
+            .duration(1000)
             .repeat(0)
             .playOn(number_bangla_btn_ID)
 //animation for item
         YoYo.with(Techniques.SlideInLeft)
-            .duration(2000)
+            .duration(1000)
             .repeat(0)
             .playOn(banjon_borno_btn_ID)
 //animation for item
         YoYo.with(Techniques.SlideInLeft)
-            .duration(2000)
+            .duration(1000)
             .repeat(0)
             .playOn(small_letters_btn_ID)
 //animation for item
@@ -115,13 +118,38 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun show_Alert_to_Exit_The_App() {
 
-        AlertDialog.Builder(this)
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.custom_alert_exit_or_rate)
+
+        val no_btn = dialog.findViewById(R.id.no_button_ID) as Button
+        val yes_btn = dialog.findViewById(R.id.yes_btn_ID) as Button
+        val rate_btn = dialog.findViewById(R.id.rate_btn_ID) as Button
+        dialog.show()
+        no_btn.setOnClickListener{
+            dialog.dismiss()
+        }
+        yes_btn.setOnClickListener{
+          dialog.dismiss()
+           finish()
+
+        }
+        rate_btn.setOnClickListener{
+            dialog.dismiss()
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=${this.packageName}")))
+            Log.e("Tag - ","package name = "+this.packageName)
+
+        }
+
+
+       /* AlertDialog.Builder(this)
             .setIcon(android.R.drawable.ic_dialog_alert)
             .setTitle("Exit App")
             .setMessage("Are you sure you want to Exit this App?")
             .setPositiveButton("Yes") { dialog, which -> finish() }
             .setNegativeButton("No", null)
-            .show()
+            .show()*/
     }
 
     override fun onBackPressed() {

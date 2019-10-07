@@ -158,6 +158,7 @@ class BanjonBorno_Activity : AppCompatActivity() {
         banjon_borno_voice_list.add(R.raw.b37)
         banjon_borno_voice_list.add(R.raw.b38)
         banjon_borno_voice_list.add(R.raw.b39)
+        banjon_borno_voice_list.add(R.raw.b40)
 
         banjon_borno_image_details_list.add(R.drawable.b01)
         banjon_borno_image_details_list.add(R.drawable.b02)
@@ -261,8 +262,6 @@ class BanjonBorno_Activity : AppCompatActivity() {
                             .playOn(view.findViewById(R.id.item_text_banjon_borno))
 
 
-                        if (position != 39) {
-
                             banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
                             imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
                             bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
@@ -274,24 +273,7 @@ class BanjonBorno_Activity : AppCompatActivity() {
                                 banjon_borno_voice_list[position]
                             )
                             mPlayer2.start()
-                        } else {
-                            //animation of item click
-                            YoYo.with(Techniques.BounceInLeft)
-                                .duration(500)
-                                .repeat(0)
-                                .playOn(view.findViewById(R.id.item_text_banjon_borno))
 
-                           /* if (mPlayer2.isPlaying){
-
-                                mPlayer2.stop()
-                                mPlayer2.release()
-
-                            }*/
-                            banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
-                            imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
-                            bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
-
-                        }
 
 
                         if (position%2==0){
@@ -380,7 +362,6 @@ class BanjonBorno_Activity : AppCompatActivity() {
                                 .playOn(bangonorno_example_details_TV_ID)
                         }
 
-                        if (position != 39) {
 
                             //animation of item click
                             YoYo.with(Techniques.BounceInLeft)
@@ -400,28 +381,6 @@ class BanjonBorno_Activity : AppCompatActivity() {
                                 banjon_borno_voice_list[position]
                             )
                             mPlayer2.start()
-                        } else {
-
-                            //animation of item click
-                            YoYo.with(Techniques.BounceInLeft)
-                                .duration(500)
-                                .repeat(0)
-                                .playOn(view!!.findViewById(R.id.item_text_banjon_borno))
-
-                            banjonorno_text_show_TV_ID.text=banjon_borno_List[position]
-
-                           /* if (mPlayer2.isPlaying){
-
-                                mPlayer2.stop()
-                                mPlayer2.release()
-                                mPlayer2 = MediaPlayer()
-//                                mPlayer2.reset()
-                            }*/
-                            imageView_details_banjon_borno.setImageResource(banjon_borno_image_details_list[position])
-                            bangonorno_example_details_TV_ID.text=banjonborno_example_text[position]
-
-                        }
-
 
                     }
 

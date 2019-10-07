@@ -141,7 +141,7 @@ class English_Numer_Activity : AppCompatActivity() {
         number_english_speeling.add("Ninety-seven")
         number_english_speeling.add("Ninety-eight")
         number_english_speeling.add("Ninety-Nine")
-        number_english_speeling.add("Hundred")
+        number_english_speeling.add("One Hundred")
 
         number_sound.add(R.raw.english_0)
         number_sound.add(R.raw.english_1)

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "627284287572",
+    "firebase_url": "https://okkhor-shikhi.firebaseio.com",
+    "project_id": "okkhor-shikhi",
+    "storage_bucket": "okkhor-shikhi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627284287572:android:a0c46eb6410ba884",
+        "android_client_info": {
+          "package_name": "imransk.ml.okkhorshikhi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627284287572-3mk4qklo9oh81iq8f0f2l8ld6lpsodqn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSDI8MMzcqKOUIe__Eal-p5L2PL_d1ZcU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627284287572-3mk4qklo9oh81iq8f0f2l8ld6lpsodqn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="45sp"
+                android:textColor="#000"
+                android:text="Quit"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#000"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#000"
+                android:layout_marginBottom="20sp"
+                android:layout_marginTop="20sp"
+                android:text="Are You Sure, You Want To Exit ?"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60sp"
+                android:text="No"
+                android:id="@+id/no_button_ID"
+                android:layout_margin="10sp"
+                android:textSize="20sp"/>
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/yes_btn_ID"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="10sp"
+                android:layout_height="60sp"
+                android:text="YES"
+                android:textSize="20sp"/>
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60sp"
+                android:text="Rate"
+                android:id="@+id/rate_btn_ID"
+                android:layout_margin="10sp"
+                android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
